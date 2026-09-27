@@ -7,6 +7,7 @@
 [ext_resource type="AudioStream" uid="uid://dddbwsp2emr2" path="res://assets/audio/sfx/Ambient_DesertSunny.ogg" id="5_tsmbm"]
 [ext_resource type="PackedScene" uid="uid://dsaf48h56ubr" path="res://scenes/level_elements/common_level.tscn" id="6_5sfmg"]
 [ext_resource type="PackedScene" uid="uid://75wf2fkcgd2q" path="res://scenes/entities/player.tscn" id="6_y3vdi"]
+[ext_resource type="Environment" uid="uid://7w2ep66q401r" path="res://environement/level4.tres" id="7_ev8xs"]
 [ext_resource type="PackedScene" uid="uid://dbynw7w7qasvq" path="res://scenes/level_elements/camera_things.tscn" id="7_irrt8"]
 [ext_resource type="PackedScene" uid="uid://baubasbmvb4eu" path="res://scenes/level_enviro/cactus.tscn" id="9_q6dln"]
 [ext_resource type="PackedScene" uid="uid://ftcd0lbngyqw" path="res://scenes/level_elements/ground.tscn" id="9_tsmbm"]
@@ -31,6 +32,9 @@ dialog_failure = ExtResource("4_xx6b8")
 ambient = ExtResource("5_tsmbm")
 
 [node name="CommonLevel" parent="." unique_id=96974107 instance=ExtResource("6_5sfmg")]
+
+[node name="WorldEnvironment" parent="CommonLevel" index="0" unique_id=1133930049]
+environment = ExtResource("7_ev8xs")
 
 [node name="Player" parent="." unique_id=421952062 instance=ExtResource("6_y3vdi")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7994308, 0)
@@ -347,6 +351,7 @@ light_angular_distance = 3.63
 
 [node name="UI" parent="CanvasLayer" unique_id=156332835 instance=ExtResource("12_7kkoh")]
 
+[editable path="CommonLevel"]
 [editable path="CameraThings"]
 [editable path="Map/FencesCircle"]
 [editable path="Map/FencesCircle/Pen"]
