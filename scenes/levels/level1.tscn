@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://baubasbmvb4eu" path="res://scenes/level_enviro/cactus.tscn" id="5_nfihu"]
 [ext_resource type="PackedScene" uid="uid://dsaf48h56ubr" path="res://scenes/level_elements/common_level.tscn" id="6_4fww7"]
 [ext_resource type="PackedScene" uid="uid://fwbtpt0ervu" path="res://scenes/level_enviro/kayou_tall.tscn" id="6_lgguw"]
+[ext_resource type="Environment" uid="uid://c1cv4jrraw7db" path="res://environement/level1.tres" id="7_gvm5i"]
 [ext_resource type="PackedScene" uid="uid://bntbb8jrqwcl4" path="res://scenes/entities/cow.tscn" id="7_jprdt"]
 [ext_resource type="PackedScene" uid="uid://ftcd0lbngyqw" path="res://scenes/level_elements/ground.tscn" id="8_g7tkf"]
 [ext_resource type="PackedScene" uid="uid://jf1c63gatqdj" path="res://scenes/ui/game_ui.tscn" id="8_ps2vj"]
@@ -72,6 +73,9 @@ dialog_failure = ExtResource("4_nfihu")
 ambient = ExtResource("5_lgguw")
 
 [node name="CommonLevel" parent="." unique_id=96974107 instance=ExtResource("6_4fww7")]
+
+[node name="WorldEnvironment" parent="CommonLevel" index="0" unique_id=1133930049]
+environment = ExtResource("7_gvm5i")
 
 [node name="Player" parent="." unique_id=303297383 node_paths=PackedStringArray("level") instance=ExtResource("2_plydf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7994308, 0)
@@ -256,6 +260,7 @@ light_angular_distance = 3.63
 
 [node name="UI" parent="CanvasLayer" unique_id=156332835 instance=ExtResource("8_ps2vj")]
 
+[editable path="CommonLevel"]
 [editable path="CameraThings"]
 [editable path="Map/Pen"]
 [editable path="Map/Obstacles/KayouTall"]

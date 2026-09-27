@@ -1,0 +1,11 @@
+[gd_resource type="Environment" format=3 uid="uid://c2nc82egxp6la"]
+
+[resource]
+background_color = Color(0, 0.43529412, 1, 1)
+ambient_light_source = 2
+ambient_light_color = Color(0.44705883, 0.21568628, 0, 1)
+ambient_light_energy = 1.25
+adjustment_enabled = true
+adjustment_brightness = 1.06
+adjustment_contrast = 0.835
+adjustment_saturation = 1.56

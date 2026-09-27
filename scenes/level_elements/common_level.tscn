@@ -1,3 +1,8 @@
 [gd_scene format=3 uid="uid://dsaf48h56ubr"]
 
+[ext_resource type="Environment" uid="uid://c2nc82egxp6la" path="res://environement/default.tres" id="1_xesns"]
+
 [node name="CommonLevel" type="Node3D" unique_id=96974107]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1133930049]
+environment = ExtResource("1_xesns")
