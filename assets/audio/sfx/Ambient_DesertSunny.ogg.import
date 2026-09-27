@@ -2,7 +2,7 @@
 
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
-uid="uid://dddbwsp2emr2"
+uid="uid://dl5y0gw0lqgtj"
 path="res://.godot/imported/Ambient_DesertSunny.ogg-fb0ec4c9947e4efc7f642b863aba38d7.oggvorbisstr"
 
 [deps]
@@ -12,7 +12,7 @@ dest_files=["res://.godot/imported/Ambient_DesertSunny.ogg-fb0ec4c9947e4efc7f642
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0
 bpm=0
 beat_count=0

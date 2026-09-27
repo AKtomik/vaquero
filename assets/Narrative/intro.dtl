@@ -3,7 +3,7 @@ set {loyalty} = 0
 Ixmiquilpan, 1551. Tu attends ton père à l’ombre de l’immense monastère érigé à la place de l’église en bois et en paille où tu as été baptisé seize ans auparavant. A la sortie de la messe, tu aperçois ton père qui te fait signe d’approcher.
 join pere center
 join melchor center
-pere: Melchor, tu es un homme fait. Je t’ai appris à monter à cheval et à signer avec une plume. Tu n’as pas besoin de plus pour gagner ta vie dans ce pays. Prends la route pour San Juan del Río, tu remettras cette lettre au conquistador Bocanegra. J’ai fait sa connaissance dans le vaisseau qui nous a emmenés d’Espagne jusqu’ici. Il a prouvé sa valeur en faisant la guerre dans le pays des Chichimèques, les plus barbares des Indiens.
+pere: Melchor, tu es un homme fait. Je t’ai appris à monter à cheval et à signer avec une plume. Tu n’as pas besoin de plus pour gagner ta vie dans ce pays. Prends la route pour San Juan del Río, tu remettras cette lettre au conquistador Bocanegra. J’ai fait sa connaissance dans le vaisseau qui nous a emmenés d’Espagne jusqu’ici. Depuis, il a prouvé sa valeur en faisant la guerre dans le pays des Chichimèques, les plus barbares des Indiens.
 - Jamais ! Un Chichimèque peut tuer d’une seule flèche un cheval et son cavalier.
 	pere: C’est vrai, mais ces infidèles n’en ont plus pour longtemps. Les Otomis vont nous aider à les soumettre. Et le vice-roi distribue d’immenses terres à tous les Espagnols qui veulent élever des vaches et des chevaux. Travaille pour l’un d’entre eux et tu jouiras de sa protection et de sa richesse.
 - Très bien. J’espère ne plus jamais revoir ton visage, perro, puto, bellaco.

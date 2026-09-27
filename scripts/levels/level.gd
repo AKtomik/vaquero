@@ -22,7 +22,7 @@ var score_current = 0
 # Audio
 @export_group("audio")
 @export var ambient: AudioStream
-@onready var music_arcade = preload("res://assets/audio/music/corridos.ogg")
+@onready var music_arcade = preload("res://assets/audio/music/Theme4_V2Corridos.ogg")
 @onready var sfx_game_over = preload("res://assets/audio/sfx/GIMMICK_Defeat.ogg")
 @onready var sfx_victory = preload("res://assets/audio/sfx/GIMMICK_Victory.ogg")
 @onready var sfx_feedback_enter_pen = [preload("res://assets/audio/sfx/FB_Enclos1.ogg"), preload("res://assets/audio/sfx/FB_Enclos2.ogg"), preload("res://assets/audio/sfx/FB_Enclos3.ogg"), preload("res://assets/audio/sfx/FB_Enclos4.ogg"), preload("res://assets/audio/sfx/FB_Enclos5.ogg")]
