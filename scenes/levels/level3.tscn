@@ -20,8 +20,8 @@
 
 [node name="LevelRoot" type="Node3D" unique_id=1058585129 node_paths=PackedStringArray("sun_node", "pen_node", "ui_node")]
 script = ExtResource("1_ah4rv")
-duration_seconds = 90.0
-score_goal = 20
+duration_seconds = 120.0
+score_goal = 15
 sun_node = NodePath("Sun")
 pen_node = NodePath("Map/FencesCircle/Pen")
 ui_node = NodePath("CanvasLayer/UI")
