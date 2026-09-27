@@ -7,7 +7,7 @@
 [ext_resource type="Resource" uid="uid://bhwd45fbbf4n6" path="res://assets/Narrative/interlude1.dtl" id="3_nkeig"]
 [ext_resource type="Resource" uid="uid://du3awvkimlfxh" path="res://assets/Narrative/retry1.dtl" id="4_nfihu"]
 [ext_resource type="PackedScene" uid="uid://diunkg44s7ous" path="res://scenes/level_elements/pen.tscn" id="4_nkeig"]
-[ext_resource type="AudioStream" uid="uid://wdxdchpanyf7" path="res://assets/audio/sfx/Ambient_DesertStormandRain.ogg" id="5_lgguw"]
+[ext_resource type="AudioStream" uid="uid://nhjdye36vmwl" path="res://assets/audio/sfx/Ambient_DesertStormandRain.ogg" id="5_lgguw"]
 [ext_resource type="PackedScene" uid="uid://baubasbmvb4eu" path="res://scenes/level_enviro/cactus.tscn" id="5_nfihu"]
 [ext_resource type="PackedScene" uid="uid://dsaf48h56ubr" path="res://scenes/level_elements/common_level.tscn" id="6_4fww7"]
 [ext_resource type="PackedScene" uid="uid://fwbtpt0ervu" path="res://scenes/level_enviro/kayou_tall.tscn" id="6_lgguw"]

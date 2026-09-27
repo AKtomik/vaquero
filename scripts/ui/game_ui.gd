@@ -15,7 +15,7 @@ func _process(_delta: float) -> void:
 
 
 func update_herding_score(value, objective):
-	SCORE_LABEL.text = str(value) + "/" + str(objective)
+	SCORE_LABEL.text = str(value) + "I" + str(objective)
 
 func update_timer(progress, max):
 	TIMER_LABEL.text = str(round((max - progress) * 10) / 10)

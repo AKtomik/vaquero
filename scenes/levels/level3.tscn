@@ -5,7 +5,7 @@
 [ext_resource type="Resource" uid="uid://bxxuu456elluo" path="res://assets/Narrative/interlude3.dtl" id="3_wb0vq"]
 [ext_resource type="PackedScene" uid="uid://75wf2fkcgd2q" path="res://scenes/entities/player.tscn" id="4_t14x3"]
 [ext_resource type="Resource" uid="uid://dmqpi3rxuc0nv" path="res://assets/Narrative/retry3.dtl" id="4_wb0vq"]
-[ext_resource type="AudioStream" uid="uid://dddbwsp2emr2" path="res://assets/audio/sfx/Ambient_DesertSunny.ogg" id="5_522sc"]
+[ext_resource type="AudioStream" uid="uid://dl5y0gw0lqgtj" path="res://assets/audio/sfx/Ambient_DesertSunny.ogg" id="5_522sc"]
 [ext_resource type="PackedScene" uid="uid://dbynw7w7qasvq" path="res://scenes/level_elements/camera_things.tscn" id="5_ahaer"]
 [ext_resource type="PackedScene" uid="uid://dsaf48h56ubr" path="res://scenes/level_elements/common_level.tscn" id="6_a82vw"]
 [ext_resource type="PackedScene" uid="uid://baubasbmvb4eu" path="res://scenes/level_enviro/cactus.tscn" id="8_edoqj"]

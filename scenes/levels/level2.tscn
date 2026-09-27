@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://bsy2oiyt8le24" path="res://scripts/levels/level.gd" id="1_b0vvs"]
 [ext_resource type="PackedScene" uid="uid://cec72ktdq4lo8" path="res://scenes/narrative/narrative_scene.tscn" id="2_gycjm"]
 [ext_resource type="PackedScene" uid="uid://75wf2fkcgd2q" path="res://scenes/entities/player.tscn" id="2_oyk6k"]
-[ext_resource type="AudioStream" uid="uid://4cmqsfhnrl74" path="res://assets/audio/sfx/Ambient_DesertWind.ogg" id="3_8i1lk"]
+[ext_resource type="AudioStream" uid="uid://dxxrc77w7pml2" path="res://assets/audio/sfx/Ambient_DesertWind.ogg" id="3_8i1lk"]
 [ext_resource type="PackedScene" uid="uid://dbynw7w7qasvq" path="res://scenes/level_elements/camera_things.tscn" id="3_gycjm"]
 [ext_resource type="Resource" uid="uid://cwdkvsxk6upty" path="res://assets/Narrative/interlude2.dtl" id="3_hkuam"]
 [ext_resource type="Resource" uid="uid://cnnm2mclhmu5m" path="res://assets/Narrative/retry2.dtl" id="4_f3b2k"]
