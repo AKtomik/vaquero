@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://cvriv8bdun62"
 path.s3tc="res://.godot/imported/M_Roche_OcclusionRoughnessMetallic.png-7d3404ec1442ea3c40e942479819bcdd.s3tc.ctex"
+path.etc2="res://.godot/imported/M_Roche_OcclusionRoughnessMetallic.png-7d3404ec1442ea3c40e942479819bcdd.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/models/rok/M_Roche_OcclusionRoughnessMetallic.png"
-dest_files=["res://.godot/imported/M_Roche_OcclusionRoughnessMetallic.png-7d3404ec1442ea3c40e942479819bcdd.s3tc.ctex"]
+dest_files=["res://.godot/imported/M_Roche_OcclusionRoughnessMetallic.png-7d3404ec1442ea3c40e942479819bcdd.s3tc.ctex", "res://.godot/imported/M_Roche_OcclusionRoughnessMetallic.png-7d3404ec1442ea3c40e942479819bcdd.etc2.ctex"]
 
 [params]
 

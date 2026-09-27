@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://x8x8wcdogn2k"
 path.s3tc="res://.godot/imported/M_Caillou_BaseColor.png-2aec67f1cee7751c528c68b0231084ed.s3tc.ctex"
+path.etc2="res://.godot/imported/M_Caillou_BaseColor.png-2aec67f1cee7751c528c68b0231084ed.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/models/kayou/M_Caillou_BaseColor.png"
-dest_files=["res://.godot/imported/M_Caillou_BaseColor.png-2aec67f1cee7751c528c68b0231084ed.s3tc.ctex"]
+dest_files=["res://.godot/imported/M_Caillou_BaseColor.png-2aec67f1cee7751c528c68b0231084ed.s3tc.ctex", "res://.godot/imported/M_Caillou_BaseColor.png-2aec67f1cee7751c528c68b0231084ed.etc2.ctex"]
 
 [params]
 

@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://b0ngh5ggdb4e5"
 path.s3tc="res://.godot/imported/M_Barriere_OcclusionRoughnessMetallic.png-e5c3f88eb78c3753c6f1623d9def8ae7.s3tc.ctex"
+path.etc2="res://.godot/imported/M_Barriere_OcclusionRoughnessMetallic.png-e5c3f88eb78c3753c6f1623d9def8ae7.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/models/fence/M_Barriere_OcclusionRoughnessMetallic.png"
-dest_files=["res://.godot/imported/M_Barriere_OcclusionRoughnessMetallic.png-e5c3f88eb78c3753c6f1623d9def8ae7.s3tc.ctex"]
+dest_files=["res://.godot/imported/M_Barriere_OcclusionRoughnessMetallic.png-e5c3f88eb78c3753c6f1623d9def8ae7.s3tc.ctex", "res://.godot/imported/M_Barriere_OcclusionRoughnessMetallic.png-e5c3f88eb78c3753c6f1623d9def8ae7.etc2.ctex"]
 
 [params]
 

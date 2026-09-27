@@ -18,7 +18,7 @@
 [ext_resource type="PackedScene" uid="uid://jf1c63gatqdj" path="res://scenes/ui/game_ui.tscn" id="13_db4wd"]
 [ext_resource type="PackedScene" uid="uid://mp8qbo46v7fm" path="res://scenes/level_elements/pen_fences.tscn" id="13_edoqj"]
 
-[node name="LevelRoot" type="Node3D" unique_id=1058585129 node_paths=PackedStringArray("sun_node", "pen_node", "ui_node")]
+[node name="LevelRoot2" type="Node3D" unique_id=1058585129 node_paths=PackedStringArray("sun_node", "pen_node", "ui_node")]
 script = ExtResource("1_ah4rv")
 duration_seconds = 120.0
 score_goal = 15

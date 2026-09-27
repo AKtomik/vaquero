@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://bvx273e6agrqx"
 path.s3tc="res://.godot/imported/M_Gazon_BaseColor.png-b1bd6aaf4822ede8d8f3e6dc9165efa1.s3tc.ctex"
+path.etc2="res://.godot/imported/M_Gazon_BaseColor.png-b1bd6aaf4822ede8d8f3e6dc9165efa1.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/models/grass/M_Gazon_BaseColor.png"
-dest_files=["res://.godot/imported/M_Gazon_BaseColor.png-b1bd6aaf4822ede8d8f3e6dc9165efa1.s3tc.ctex"]
+dest_files=["res://.godot/imported/M_Gazon_BaseColor.png-b1bd6aaf4822ede8d8f3e6dc9165efa1.s3tc.ctex", "res://.godot/imported/M_Gazon_BaseColor.png-b1bd6aaf4822ede8d8f3e6dc9165efa1.etc2.ctex"]
 
 [params]
 

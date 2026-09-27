@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://fwu2ib2k14ln"
 path.s3tc="res://.godot/imported/M_Roche_Normal.png-460b6e45c5048266b66f2a6a9dfd25d0.s3tc.ctex"
+path.etc2="res://.godot/imported/M_Roche_Normal.png-460b6e45c5048266b66f2a6a9dfd25d0.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/models/rok/M_Roche_Normal.png"
-dest_files=["res://.godot/imported/M_Roche_Normal.png-460b6e45c5048266b66f2a6a9dfd25d0.s3tc.ctex"]
+dest_files=["res://.godot/imported/M_Roche_Normal.png-460b6e45c5048266b66f2a6a9dfd25d0.s3tc.ctex", "res://.godot/imported/M_Roche_Normal.png-460b6e45c5048266b66f2a6a9dfd25d0.etc2.ctex"]
 
 [params]
 

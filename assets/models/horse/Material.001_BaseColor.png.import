@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://cbf4c3gb0vn15"
 path.s3tc="res://.godot/imported/Material.001_BaseColor.png-174ca99be390386e114cbf508165b9ab.s3tc.ctex"
+path.etc2="res://.godot/imported/Material.001_BaseColor.png-174ca99be390386e114cbf508165b9ab.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/models/horse/Material.001_BaseColor.png"
-dest_files=["res://.godot/imported/Material.001_BaseColor.png-174ca99be390386e114cbf508165b9ab.s3tc.ctex"]
+dest_files=["res://.godot/imported/Material.001_BaseColor.png-174ca99be390386e114cbf508165b9ab.s3tc.ctex", "res://.godot/imported/Material.001_BaseColor.png-174ca99be390386e114cbf508165b9ab.etc2.ctex"]
 
 [params]
 

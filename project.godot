@@ -10,7 +10,8 @@ config_version=5
 
 [application]
 
-config/name="Coward"
+config/name="VAQUEROs"
+config/description="Incarne Melchor, fils d’une esclave de Guinée et d’un colon de Castille, dont le parcours de vie doit composer avec les opportunités qui se présentent à lui au fur et à mesure que la colonisation espagnole du Mexique progresse. Plongé dans l’immensité du désert où la guerre entre Espagnols et Chichimèques fait rage, les éleveurs t'engagent pour acclimater les bovins dans cette région du monde, pour les acheminer vers un enclos ou les amener à la boucherie. Il faut du talent pour conjuguer ta force à la rapidité du cheval et à l'obstination des vaches, mais il en faut davantage encore pour composer avec les quelques opportunités qui s'offrent à toi. Mourras-tu pour avoir provoqué un Espagnol ou dans un guet-apens orchestré par les nomades insoumis ?"
 run/main_scene="uid://c4qt43tbd3w5x"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
@@ -137,3 +138,4 @@ dialogic_default_action={
 rendering_device/driver.windows="d3d12"
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
+textures/vram_compression/import_etc2_astc=true
