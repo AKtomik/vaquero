@@ -49,6 +49,24 @@ size_flags_vertical = 4
 texture_normal = ExtResource("3_e11en")
 texture_hover = ExtResource("4_288ov")
 
+[node name="Challenge" type="TextureButton" parent="CanvasLayer" unique_id=1684767863]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -88.0
+offset_top = 108.0
+offset_right = 473.0
+offset_bottom = 439.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.3, 0.3)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("3_e11en")
+texture_hover = ExtResource("4_288ov")
+
 [node name="Credits" type="TextureButton" parent="CanvasLayer" unique_id=474847998]
 offset_left = 912.00006
 offset_top = 536.0
@@ -122,6 +140,7 @@ scale = Vector2(0.6, 0.6)
 texture = ExtResource("12_dnmb1")
 
 [connection signal="pressed" from="CanvasLayer/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="CanvasLayer/Challenge" to="." method="_on_challenge_pressed"]
 [connection signal="pressed" from="CanvasLayer/Credits" to="." method="_on_credits_pressed"]
 [connection signal="pressed" from="CanvasLayer/Mute" to="." method="_on_mute_pressed"]
 [connection signal="pressed" from="CanvasLayer/Quit" to="." method="_on_quit_pressed"]
