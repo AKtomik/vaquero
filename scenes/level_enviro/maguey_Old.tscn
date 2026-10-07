@@ -33,10 +33,11 @@ shape = SubResource("SphereShape3D_u60bi")
 
 [node name="Maguey_Old_Young" parent="." unique_id=1570238640 instance=ExtResource("1_5dsvc")]
 
-[node name="Maguey_Old" parent="Maguey_Old_Young" index="0" unique_id=916029745]
+[node name="Maguey_Old" parent="Maguey_Old_Young" index="0" unique_id=1287655431]
 material_override = SubResource("StandardMaterial3D_l0mlt")
 
-[node name="Maguey_Young" parent="Maguey_Old_Young" index="1" unique_id=781436813]
+[node name="Maguey_Young" parent="Maguey_Old_Young" index="1" unique_id=735535113]
+visible = false
 material_override = SubResource("StandardMaterial3D_5dsvc")
 
 [editable path="Maguey_Old_Young"]
