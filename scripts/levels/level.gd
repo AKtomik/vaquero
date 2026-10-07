@@ -1,7 +1,7 @@
 class_name Level
 extends Node3D
 
-@export_group("propeties")
+@export_group("properties")
 @export var duration_seconds: float = 60
 @export var progress_seconds: float = 0
 @export var score_goal: int = 2

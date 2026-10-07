@@ -14,6 +14,13 @@ var sound_on: bool = true
 func _ready() -> void:
 	
 	MusicPlayer.play_music_start()
+	
+	if GameOverlord.game_finished_once:
+		print("test")
+		$CanvasLayer/Challenge.disabled = false
+	else:
+		print("no challenge")
+		$CanvasLayer/Challenge.disabled = true
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -64,3 +71,9 @@ func _on_mute_pressed() -> void:
 		mute_button.texture_normal = sound_on_idle
 		mute_button.texture_hover = sound_on_hover
 		AudioServer.set_bus_volume_db(master_bus, 0)
+
+
+func _on_challenge_pressed() -> void:
+	
+	GameOverlord.start_challenge()
+	

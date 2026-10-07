@@ -30,20 +30,24 @@ scale = Vector2(0.6, 0.6)
 texture = ExtResource("2_fct72")
 
 [node name="TextureRect2" type="TextureRect" parent="." unique_id=1908133291]
-layout_mode = 0
-offset_left = 872.0
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -280.0
 offset_top = 8.0
-offset_right = 1326.0
+offset_right = 174.0
 offset_bottom = 197.0
+grow_horizontal = 0
 scale = Vector2(0.6, 0.6)
 texture = ExtResource("3_ru5ln")
 
 [node name="HerdingScore" type="Label" parent="." unique_id=1385031824]
-layout_mode = 0
-offset_left = 152.0
-offset_top = 16.0
-offset_right = 192.0
-offset_bottom = 99.0
+layout_mode = 1
+offset_left = 168.0
+offset_top = 40.0
+offset_right = 208.0
+offset_bottom = 100.0
 theme_override_fonts/font = ExtResource("4_v1bdg")
 text = "0"
 label_settings = SubResource("LabelSettings_2r41h")
