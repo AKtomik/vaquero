@@ -6,7 +6,8 @@ extends CharacterBody3D
 
 @export var visual_rotated: Node3D
 @export var level: Level
-@export var animation: AnimationPlayer
+@export var walk_animation: AnimationPlayer
+@export var walk_speed: float = 1
 
 # Audio
 @onready var sfx_galop = preload("res://assets/audio/sfx/Loop_Galop.ogg")
@@ -53,13 +54,13 @@ func _physics_process(delta: float) -> void:
 				horse_player.stream = sfx_horse_sniff.pick_random()
 				horse_player.play()
 
-		var animation_speed = velocity.length() / 5
+		var animation_speed = velocity.length() / 10 * walk_speed
 		if (animation_speed > 0):
-			animation.play("Armature|ArmatureAction")
-			animation.speed_scale = animation_speed
+			walk_animation.play("Armature|ArmatureAction")
+			walk_animation.speed_scale = animation_speed
 		else:
-			animation.stop()
-			animation.seek(.6, true)
+			walk_animation.stop()
+			walk_animation.seek(.6, true)
 	
 		#print("facing:", facing, facing.angle(), visual_rotated.rotation)
 		visual_rotated.rotation.y = -facing.angle() + PI / 2

@@ -18,7 +18,7 @@ normal_texture = ExtResource("5_d4qa6")
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_bfnls"]
 
-[node name="PlayerHorse" type="CharacterBody3D" unique_id=421952062 node_paths=PackedStringArray("visual_rotated", "animation")]
+[node name="PlayerHorse" type="CharacterBody3D" unique_id=421952062 node_paths=PackedStringArray("visual_rotated", "walk_animation")]
 collision_layer = 4
 collision_mask = 27
 axis_lock_angular_x = true
@@ -28,7 +28,8 @@ SPEED_MAX = 15.0
 SPEED_ACCELERATION = 0.8
 SPEED_DECELERATION = 0.06
 visual_rotated = NodePath("VisalRotated")
-animation = NodePath("VisalRotated/Cheval_animated/AnimationPlayer")
+walk_animation = NodePath("VisalRotated/Cheval_animated/AnimationPlayer")
+walk_speed = 2.5
 
 [node name="DetectionRange" type="Area3D" parent="." unique_id=1335660236]
 collision_layer = 256
