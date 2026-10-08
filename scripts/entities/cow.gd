@@ -41,6 +41,10 @@ var obstacles: Array[Node3D] = []
 @export var OBSTACLE_LOOK_AHEAD: float = 5.0
 @export var OBSTACLE_MAX_DIST: float = 100.0
 
+@export_group("Animation")
+@export var walk_animation: AnimationPlayer
+@export var walk_speed: float = 1
+
 # Audio
 @onready var mow_timer: Timer = $AudioStreamPlayer3D/MowTimer
 @onready var mow_player: AudioStreamPlayer3D = $AudioStreamPlayer3D
@@ -82,6 +86,14 @@ func _physics_process(delta: float) -> void:
 	# Rotate to face the right direction
 	var current_direction = global_position + velocity
 	look_at(current_direction)
+
+	var animation_speed = velocity.length() / 10 * walk_speed
+	if (animation_speed > 0):
+		walk_animation.play("Armature_001|ArmatureAction")
+		walk_animation.speed_scale = animation_speed
+	else:
+		walk_animation.stop()
+		walk_animation.seek(.6, true)
 
 	move_and_slide()
 

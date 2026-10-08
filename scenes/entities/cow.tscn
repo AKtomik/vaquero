@@ -1,6 +1,7 @@
 [gd_scene format=4 uid="uid://bntbb8jrqwcl4"]
 
 [ext_resource type="Script" uid="uid://cceapts7dyrd" path="res://scripts/entities/cow.gd" id="1_fgglk"]
+[ext_resource type="PackedScene" uid="uid://toq2g5157ydi" path="res://assets/models/vache/vache_animated.fbx" id="2_o01hf"]
 [ext_resource type="PackedScene" uid="uid://ceekdq1opge0w" path="res://assets/models/vache/vache.fbx" id="2_q53vi"]
 [ext_resource type="Texture2D" uid="uid://f33php24jfji" path="res://assets/models/vache/M_Vache_BaseColor.png" id="3_wm41f"]
 [ext_resource type="Texture2D" uid="uid://cwakpl0tugt7c" path="res://assets/models/vache/M_Vache_Normal.png" id="4_vg2fe"]
@@ -13,6 +14,13 @@
 radius = 2.0
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_u60bi"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7uilf"]
+albedo_texture = ExtResource("3_wm41f")
+metallic = 1.0
+metallic_texture = ExtResource("5_iqv4j")
+normal_enabled = true
+normal_texture = ExtResource("4_vg2fe")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nd8rp"]
 albedo_texture = ExtResource("3_wm41f")
@@ -50,7 +58,7 @@ stream_1/stream = ExtResource("6_wm41f")
 stream_2/stream = ExtResource("7_iqv4j")
 stream_3/stream = ExtResource("8_o01hf")
 
-[node name="Cow" type="CharacterBody3D" unique_id=869209800 node_paths=PackedStringArray("cow_mesh", "cow_shape", "cow_obstacle_detection_shape") groups=["cows"]]
+[node name="Cow" type="CharacterBody3D" unique_id=869209800 node_paths=PackedStringArray("cow_mesh", "cow_shape", "cow_obstacle_detection_shape", "walk_animation") groups=["cows"]]
 collision_layer = 8
 collision_mask = 3087
 axis_lock_linear_y = true
@@ -69,6 +77,8 @@ SEPARATION_WEIGHT = 50.0
 ALIGNMENT_WEIGHT = 3.0
 OBSTACLE_WEIGHT = 120.0
 OBSTACLE_LOOK_AHEAD = 90.0
+walk_animation = NodePath("vache_animated/AnimationPlayer")
+walk_speed = 3.0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1027818964]
 transform = Transform3D(-4.371139e-08, 1, -4.371139e-08, 0, -4.371139e-08, -1, -1, -4.371139e-08, 1.9106855e-15, 0, 0, 0)
@@ -79,10 +89,23 @@ transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0
 visible = false
 mesh = SubResource("CapsuleMesh_u60bi")
 
+[node name="vache_animated" parent="." unique_id=686834286 instance=ExtResource("2_o01hf")]
+
+[node name="Skeleton3D" parent="vache_animated/Armature_001" parent_id_path=PackedInt32Array(686834286, 1464409348) index="0" unique_id=1341240107]
+bones/0/position = Vector3(2.815259e-09, -0.012166846, 0.021543909)
+bones/1/rotation = Quaternion(0.37019607, 0.6144147, -0.36085242, -0.59601593)
+bones/5/rotation = Quaternion(0.65848863, 0.25599286, -0.65153635, -0.2763347)
+bones/11/rotation = Quaternion(0.39576688, -0.58524215, 0.37847355, -0.59801173)
+bones/14/rotation = Quaternion(0.6392319, -0.32547402, 0.6215679, -0.31480563)
+
+[node name="vache_low" parent="vache_animated/Armature_001/Skeleton3D" index="0" unique_id=1320538709]
+material_override = SubResource("StandardMaterial3D_7uilf")
+
 [node name="vache" parent="." unique_id=1303397550 instance=ExtResource("2_q53vi")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, 0)
+visible = false
 
-[node name="vache_low" parent="vache" index="0" unique_id=361012175]
+[node name="vache_low" parent="vache" index="0" unique_id=565491994]
 material_override = SubResource("StandardMaterial3D_nd8rp")
 
 [node name="PanicDetection" type="Area3D" parent="." unique_id=1198390454 groups=["cow_area"]]
@@ -128,4 +151,5 @@ autostart = true
 [connection signal="body_exited" from="NeighbourDetection" to="." method="_on_neighbours_detection_body_exited"]
 [connection signal="timeout" from="AudioStreamPlayer3D/MowTimer" to="." method="_on_mow_timer_timeout"]
 
+[editable path="vache_animated"]
 [editable path="vache"]
