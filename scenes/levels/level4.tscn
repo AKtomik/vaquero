@@ -155,6 +155,21 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 29.108856)
 [node name="Cactus" parent="Map/Obstacles/Wave1" unique_id=454719588 instance=ExtResource("9_q6dln")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.710398, -1.9073486e-06, -2.0625162)
 
+[node name="Cactus8" parent="Map/Obstacles/Wave1" unique_id=704973610 instance=ExtResource("9_q6dln")]
+transform = Transform3D(-0.40596747, 0, -0.9138875, 0, 1, 0, 0.9138875, 0, -0.40596747, 23.160265, -1.9073486e-06, -3.629899)
+
+[node name="Cactus9" parent="Map/Obstacles/Wave1" unique_id=910431221 instance=ExtResource("9_q6dln")]
+transform = Transform3D(-0.96104676, 0, 0.27638644, 0, 1, 0, -0.27638644, 0, -0.96104676, 23.486675, -9.536743e-07, -0.75865746)
+
+[node name="Cactus10" parent="Map/Obstacles/Wave1" unique_id=1681354314 instance=ExtResource("9_q6dln")]
+transform = Transform3D(-0.7948816, 0, -0.6067647, 0, 1, 0, 0.6067647, 0, -0.7948816, 62.162468, -9.536743e-07, -40.248245)
+
+[node name="Cactus11" parent="Map/Obstacles/Wave1" unique_id=2102299236 instance=ExtResource("9_q6dln")]
+transform = Transform3D(-0.999997, 0, -0.002462417, 0, 1, 0, 0.002462417, 0, -0.999997, -29.020279, -9.536743e-07, 3.702736)
+
+[node name="Cactus12" parent="Map/Obstacles/Wave1" unique_id=41196118 instance=ExtResource("9_q6dln")]
+transform = Transform3D(-0.67600864, 0, -0.7368937, 0, 1, 0, 0.7368937, 0, -0.67600864, -81.277596, 2.861023e-06, -15.8984165)
+
 [node name="Cactus7" parent="Map/Obstacles/Wave1" unique_id=993782478 instance=ExtResource("9_q6dln")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -75.75689, -1.9073486e-06, -45.79735)
 
@@ -202,6 +217,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 61.858223, -1.9073486e-06, -5
 
 [node name="Cactus3" parent="Map/Obstacles/Wave2" unique_id=1561639296 instance=ExtResource("9_q6dln")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 51.456074, -1.9073486e-06, -96.85123)
+
+[node name="Cactus8" parent="Map/Obstacles/Wave2" unique_id=1583848582 instance=ExtResource("9_q6dln")]
+transform = Transform3D(0.15756217, 0, -0.9875092, 0, 1, 0, 0.9875092, 0, 0.15756217, 53.495102, -1.9073486e-06, -87.97475)
 
 [node name="Cactus4" parent="Map/Obstacles/Wave2" unique_id=1321884678 instance=ExtResource("9_q6dln")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 73.86173, -1.9073486e-06, -134.93782)

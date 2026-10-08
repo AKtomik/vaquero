@@ -20,6 +20,8 @@
 [ext_resource type="PackedScene" uid="uid://dcmxru3tlafkm" path="res://scenes/level_enviro/fence.tscn" id="11_lgguw"]
 [ext_resource type="PackedScene" uid="uid://cs8is4thtdvny" path="res://scenes/level_enviro/fence_double.tscn" id="12_jprdt"]
 [ext_resource type="PackedScene" uid="uid://cyj2673dwv4l" path="res://scenes/level_enviro/rock_flat.tscn" id="13_1xax6"]
+[ext_resource type="PackedScene" uid="uid://bxh2jk4h4w186" path="res://scenes/level_enviro/maguey_Old.tscn" id="17_gvm5i"]
+[ext_resource type="PackedScene" uid="uid://bvq72mhm71aw4" path="res://scenes/level_enviro/maguey_Young.tscn" id="20_6gwlt"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o4mm1"]
 resource_name = "M_Caillou"
@@ -84,6 +86,7 @@ level = NodePath("..")
 [node name="CameraThings" parent="." unique_id=774152112 instance=ExtResource("3_5ntmo")]
 
 [node name="FollowCamera" parent="CameraThings" index="0" unique_id=2081140864 node_paths=PackedStringArray("level", "follow_node")]
+current = true
 level = NodePath("../..")
 follow_node = NodePath("../../Player")
 
@@ -169,9 +172,6 @@ transform = Transform3D(0.59060645, 0, 0.80695975, 0, 1, 0, -0.80695975, 0, 0.59
 [node name="RokSimple4" parent="Map/Walls" unique_id=1065571218 instance=ExtResource("8_sbmf2")]
 transform = Transform3D(-0.41640854, 0.24519575, 0.8754902, 0.105316535, 0.9694736, -0.2214258, -0.9030573, 0, -0.42952025, -41.77623, -1.0618324, -53.84623)
 
-[node name="Cactus" parent="Map/Walls" unique_id=454719588 instance=ExtResource("5_nfihu")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.636698, 0, -35.326637)
-
 [node name="FenceSimple" parent="Map/Walls" unique_id=1022040062 instance=ExtResource("11_lgguw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -33.129906, 4.053116e-06, -91.13956)
 
@@ -198,8 +198,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1680999, 1.4305115e-06, -97
 
 [node name="Obstacles" type="Node3D" parent="Map" unique_id=1374307124]
 
-[node name="Cactus" parent="Map/Obstacles" unique_id=563590368 instance=ExtResource("5_nfihu")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.636698, 0, -35.326637)
+[node name="Maguey" parent="Map/Obstacles" unique_id=1538181613 instance=ExtResource("17_gvm5i")]
+transform = Transform3D(0.9072258, 0, -0.42064387, 0, 1, 0, 0.42064387, 0, 0.9072258, 11.074658, 0, -12.606845)
 
 [node name="Cactus2" parent="Map/Obstacles" unique_id=864635818 instance=ExtResource("5_nfihu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.343026, 0, -8.667871)
@@ -211,20 +211,20 @@ transform = Transform3D(0.9608336, 0, 0.27712587, 0, 1, 0, -0.27712587, 0, 0.960
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38.605263, -1.9073486e-06, -15.628393)
 
 [node name="Cactus5" parent="Map/Obstacles" unique_id=1723445582 instance=ExtResource("5_nfihu")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.613039, -1.9073486e-06, -0.17044926)
-
-[node name="Cactus6" parent="Map/Obstacles" unique_id=716694627 instance=ExtResource("5_nfihu")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.721359, -1.9073486e-06, -12.438724)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.28008, -1.9073486e-06, -66.1797)
 
 [node name="KayouTall" parent="Map/Obstacles" unique_id=562230623 instance=ExtResource("6_lgguw")]
 transform = Transform3D(1.1756312, 0, 0, 0, 1.1756312, 0, 0, 0, 1.1756312, 17.328205, 1.9073486e-06, -31.472126)
 
-[node name="Caillou_low" parent="Map/Obstacles/KayouTall/Caillou" parent_id_path=PackedInt32Array(562230623, 1528039201) index="0" unique_id=1806189870]
+[node name="Caillou_low" parent="Map/Obstacles/KayouTall/Caillou" parent_id_path=PackedInt32Array(562230623, 1528039201) index="0" unique_id=736816980]
 transform = Transform3D(75.599785, 65.457436, 7.803134e-06, 0, -1.1920931e-05, 100.00001, 65.457436, -75.59978, -9.012197e-06, 0, 0, 0)
 mesh = SubResource("ArrayMesh_e8m3u")
 
 [node name="KayouTall2" parent="Map/Obstacles" unique_id=1949165068 instance=ExtResource("6_lgguw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.607142, 3.8146973e-06, -64.781006)
+
+[node name="Maguey2" parent="Map/Obstacles" unique_id=1615553907 instance=ExtResource("20_6gwlt")]
+transform = Transform3D(0.5877731, 0, -0.8090258, 0, 1, 0, 0.8090258, 0, 0.5877731, 26.925726, 0.8139434, -2.3394337)
 
 [node name="Cows" type="Node3D" parent="." unique_id=750490606]
 
@@ -260,7 +260,9 @@ light_angular_distance = 3.63
 
 [node name="UI" parent="CanvasLayer" unique_id=156332835 instance=ExtResource("8_ps2vj")]
 
-[editable path="CommonLevel"]
+[node name="Maguey" parent="." unique_id=863656583 instance=ExtResource("17_gvm5i")]
+transform = Transform3D(0.8803613, 0, -0.47430366, 0, 1, 0, 0.47430366, 0, 0.8803613, -26.138296, 0.8139434, -36.430023)
+
 [editable path="CameraThings"]
 [editable path="Map/Pen"]
 [editable path="Map/Obstacles/KayouTall"]
