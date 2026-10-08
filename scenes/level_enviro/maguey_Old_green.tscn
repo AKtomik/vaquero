@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://dnhg3cbga7jmg"]
+
+[ext_resource type="PackedScene" uid="uid://c51crlw4mijvi" path="res://assets/models/maguey/Maguey_Old_Young.fbx" id="1_ria4a"]
+[ext_resource type="Texture2D" uid="uid://bhegjvtfpjlfe" path="res://assets/models/maguey/M_Maguey_BaseColor.png" id="2_qxjue"]
+[ext_resource type="Texture2D" uid="uid://ld4uy83qwe4r" path="res://assets/models/maguey/M_Maguey_OcclusionRoughnessMetallic.png" id="3_m2khy"]
+[ext_resource type="Texture2D" uid="uid://f5865ft1dxrk" path="res://assets/models/maguey/M_Maguey_Normal.png" id="4_ouo30"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_u60bi"]
+radius = 1.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_l0mlt"]
+albedo_color = Color(1.1902219, 1.2742168, 0.7356622, 1)
+albedo_texture = ExtResource("2_qxjue")
+metallic = 1.0
+metallic_texture = ExtResource("3_m2khy")
+roughness_texture = ExtResource("3_m2khy")
+normal_enabled = true
+normal_texture = ExtResource("4_ouo30")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5dsvc"]
+albedo_texture = ExtResource("2_qxjue")
+metallic = 1.0
+metallic_texture = ExtResource("3_m2khy")
+roughness_texture = ExtResource("3_m2khy")
+normal_enabled = true
+normal_texture = ExtResource("4_ouo30")
+
+[node name="Maguey" type="StaticBody3D" unique_id=1538181613 groups=["obstacles"]]
+collision_layer = 2
+collision_mask = 12
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1637936215]
+shape = SubResource("SphereShape3D_u60bi")
+
+[node name="Maguey_Old_Young" parent="." unique_id=1570238640 instance=ExtResource("1_ria4a")]
+
+[node name="Maguey_Old" parent="Maguey_Old_Young" index="0" unique_id=1287655431]
+material_override = SubResource("StandardMaterial3D_l0mlt")
+
+[node name="Maguey_Young" parent="Maguey_Old_Young" index="1" unique_id=735535113]
+visible = false
+material_override = SubResource("StandardMaterial3D_5dsvc")
+
+[editable path="Maguey_Old_Young"]
