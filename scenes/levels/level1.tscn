@@ -11,7 +11,6 @@
 [ext_resource type="PackedScene" uid="uid://baubasbmvb4eu" path="res://scenes/level_enviro/cactus.tscn" id="5_nfihu"]
 [ext_resource type="PackedScene" uid="uid://dsaf48h56ubr" path="res://scenes/level_elements/common_level.tscn" id="6_4fww7"]
 [ext_resource type="PackedScene" uid="uid://fwbtpt0ervu" path="res://scenes/level_enviro/kayou_tall.tscn" id="6_lgguw"]
-[ext_resource type="Environment" uid="uid://c1cv4jrraw7db" path="res://environement/level1.tres" id="7_gvm5i"]
 [ext_resource type="PackedScene" uid="uid://bntbb8jrqwcl4" path="res://scenes/entities/cow.tscn" id="7_jprdt"]
 [ext_resource type="PackedScene" uid="uid://ftcd0lbngyqw" path="res://scenes/level_elements/ground.tscn" id="8_g7tkf"]
 [ext_resource type="PackedScene" uid="uid://jf1c63gatqdj" path="res://scenes/ui/game_ui.tscn" id="8_ps2vj"]
@@ -66,6 +65,7 @@ shadow_mesh = SubResource("ArrayMesh_oq5if")
 [node name="LevelRoot" type="Node3D" unique_id=1058585129 node_paths=PackedStringArray("sun_node", "pen_node", "ui_node")]
 script = ExtResource("1_8a7m2")
 score_goal = 4
+do_tuto = true
 sun_node = NodePath("Sun")
 pen_node = NodePath("Map/Pen")
 ui_node = NodePath("CanvasLayer/UI")
@@ -76,16 +76,13 @@ ambient = ExtResource("5_lgguw")
 
 [node name="CommonLevel" parent="." unique_id=96974107 instance=ExtResource("6_4fww7")]
 
-[node name="WorldEnvironment" parent="CommonLevel" index="0" unique_id=1133930049]
-environment = ExtResource("7_gvm5i")
-
 [node name="Player" parent="." unique_id=303297383 node_paths=PackedStringArray("level") instance=ExtResource("2_plydf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7994308, 0)
 level = NodePath("..")
 
 [node name="CameraThings" parent="." unique_id=774152112 instance=ExtResource("3_5ntmo")]
 
-[node name="FollowCamera" parent="CameraThings" index="0" unique_id=2081140864 node_paths=PackedStringArray("level", "follow_node")]
+[node name="Camera" parent="CameraThings" index="0" unique_id=2081140864 node_paths=PackedStringArray("level", "follow_node")]
 current = true
 level = NodePath("../..")
 follow_node = NodePath("../../Player")
@@ -216,7 +213,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.28008, -1.9073486e-06, -6
 [node name="KayouTall" parent="Map/Obstacles" unique_id=562230623 instance=ExtResource("6_lgguw")]
 transform = Transform3D(1.1756312, 0, 0, 0, 1.1756312, 0, 0, 0, 1.1756312, 17.328205, 1.9073486e-06, -31.472126)
 
-[node name="Caillou_low" parent="Map/Obstacles/KayouTall/Caillou" parent_id_path=PackedInt32Array(562230623, 1528039201) index="0" unique_id=736816980]
+[node name="Caillou_low" parent="Map/Obstacles/KayouTall/Caillou" parent_id_path=PackedInt32Array(562230623, 1528039201) index="0" unique_id=1148379207]
 transform = Transform3D(75.599785, 65.457436, 7.803134e-06, 0, -1.1920931e-05, 100.00001, 65.457436, -75.59978, -9.012197e-06, 0, 0, 0)
 mesh = SubResource("ArrayMesh_e8m3u")
 

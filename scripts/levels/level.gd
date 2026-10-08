@@ -6,6 +6,7 @@ extends Node3D
 @export var progress_seconds: float = 0
 @export var score_goal: int = 2
 @export var do_good_score_end: bool = true
+@export var do_tuto: bool = false
 var score_current = 0
 
 @export_group("links")
@@ -67,8 +68,12 @@ func setup():
 
 func cinematic_end():
 	if (!if_waiting_input_for_start):
-			start()
-			return
+		start()
+		return
+	if (do_tuto):
+		var is_mobile = (OS.get_name() == "Android" || OS.get_name() == "iOS" || OS.has_feature("web_android") || OS.has_feature("web_ios"))
+		ui_node.update_title("bouge en cliquant\ndans une direction" if (is_mobile) else "bouge avec: Flèches\nou ZQSD ou Souris")
+
 	cinematic = false
 	started = false
 	ui_node.visible = true
@@ -77,6 +82,7 @@ func start():
 	cinematic = false
 	started = true
 	ui_node.visible = true
+	ui_node.update_title("")
 	print("level started!")
 
 func level_end():
@@ -95,6 +101,7 @@ func level_end():
 
 # score_current
 func add_score():
+	if (do_tuto): ui_node.update_title("")
 	if (ended): return
 	score_current += 1
 	ui_node.update_herding_score(score_current, score_goal)
@@ -121,6 +128,7 @@ func _process(delta: float) -> void:
 	var progress = progress_seconds / duration_seconds
 	sun_node.rotation.x = - progress * PI
 	if (progress >= 1 && !ended): level_end()
+	if (do_tuto && score_current == 0 && progress >= .5): ui_node.update_title("guide les vaches vers les clôtures")
 
 
 func _on_end_delay_timeout():
