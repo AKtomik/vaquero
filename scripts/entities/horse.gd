@@ -20,7 +20,6 @@ extends CharacterBody3D
 var last_facing: Vector2
 
 func _ready() -> void:
-	
 	galop_player.stream = sfx_galop
 
 
@@ -54,16 +53,17 @@ func _physics_process(delta: float) -> void:
 				horse_player.stream = sfx_horse_sniff.pick_random()
 				horse_player.play()
 
-		var animation_speed = velocity.length() / 10 * walk_speed
-		if (animation_speed > 0):
-			walk_animation.play("Armature|ArmatureAction")
-			walk_animation.speed_scale = animation_speed
-		else:
-			walk_animation.stop()
-			walk_animation.seek(.6, true)
-	
 		#print("facing:", facing, facing.angle(), visual_rotated.rotation)
 		visual_rotated.rotation.y = -facing.angle() + PI / 2
+
+	var animation_speed = velocity.length() / 10 * walk_speed
+	if (animation_speed > 0):
+		walk_animation.play("Armature|ArmatureAction")
+		walk_animation.speed_scale = animation_speed
+	else:
+		walk_animation.stop()
+		walk_animation.seek(.6, true)
+
 		
 	move_and_slide()
 
