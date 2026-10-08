@@ -5,8 +5,10 @@
 [ext_resource type="PackedScene" uid="uid://cmwtmuek5isnr" path="res://scenes/ui/credits.tscn" id="2_vjb58"]
 [ext_resource type="Texture2D" uid="uid://5ue7knfnmwk4" path="res://assets/UI/play buton_idle.png" id="3_e11en"]
 [ext_resource type="Texture2D" uid="uid://cclwt8oxr1epw" path="res://assets/UI/play buton_hover.png" id="4_288ov"]
+[ext_resource type="Texture2D" uid="uid://cpy86c34i1vfy" path="res://assets/UI/challenge_button_idle.png" id="5_5j7hh"]
 [ext_resource type="Texture2D" uid="uid://cx23bn6eiukqs" path="res://assets/UI/CREDITS_idle.png" id="5_tub5d"]
 [ext_resource type="Texture2D" uid="uid://sl1wdl324h2k" path="res://assets/UI/CREDITS_hover.png" id="6_dnmb1"]
+[ext_resource type="Texture2D" uid="uid://cdi5sp4wxjfid" path="res://assets/UI/challenge_button_hover.png" id="6_y7dvm"]
 [ext_resource type="Texture2D" uid="uid://d4nrfm8rwrgco" path="res://assets/UI/sound on_idle.png" id="7_5j7hh"]
 [ext_resource type="Texture2D" uid="uid://gmgj85anha52" path="res://assets/UI/sound on_hover.png" id="8_y7dvm"]
 [ext_resource type="Texture2D" uid="uid://ctrgrexyit0ny" path="res://assets/UI/quit_idle.png" id="9_tub5d"]
@@ -64,8 +66,8 @@ grow_vertical = 2
 scale = Vector2(0.3, 0.3)
 size_flags_horizontal = 4
 size_flags_vertical = 4
-texture_normal = ExtResource("3_e11en")
-texture_hover = ExtResource("4_288ov")
+texture_normal = ExtResource("5_5j7hh")
+texture_hover = ExtResource("6_y7dvm")
 
 [node name="Credits" type="TextureButton" parent="CanvasLayer" unique_id=474847998]
 offset_left = 912.00006

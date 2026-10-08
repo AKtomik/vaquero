@@ -344,6 +344,7 @@ light_angular_distance = 3.63
 [node name="UI" parent="CanvasLayer" unique_id=156332835 instance=ExtResource("17_u0jw0")]
 
 [node name="ChallengeScore" type="Control" parent="CanvasLayer" unique_id=1662244925]
+visible = false
 layout_mode = 3
 anchors_preset = 8
 anchor_left = 0.5
