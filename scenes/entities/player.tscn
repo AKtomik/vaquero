@@ -30,6 +30,7 @@ SPEED_DECELERATION = 0.06
 visual_rotated = NodePath("VisalRotated")
 walk_animation = NodePath("VisalRotated/Cheval_animated/AnimationPlayer")
 walk_speed = 2.5
+ground_physics = 1
 
 [node name="DetectionRange" type="Area3D" parent="." unique_id=1335660236]
 collision_layer = 256
@@ -48,7 +49,7 @@ shape = SubResource("SphereShape3D_bfnls")
 [node name="Cheval_animated" parent="VisalRotated" unique_id=709836439 instance=ExtResource("2_c5rqy")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, -0.7, 0)
 
-[node name="Skeleton3D" parent="VisalRotated/Cheval_animated/Armature" parent_id_path=PackedInt32Array(709836439, 1475344614) index="0" unique_id=920884271]
+[node name="Skeleton3D" parent="VisalRotated/Cheval_animated/Armature" parent_id_path=PackedInt32Array(709836439, 1136541452) index="0" unique_id=2063106762]
 bones/1/position = Vector3(0.0031771325, -6.878345e-05, 0.0008782426)
 bones/1/rotation = Quaternion(0.49145338, 0.50840294, -0.49145314, -0.5084033)
 bones/1/scale = Vector3(1.0000001, 1.0000001, 1.0000002)
@@ -98,7 +99,7 @@ bones/20/position = Vector3(2.8119598e-09, 0.0068417727, 5.9601095e-11)
 bones/20/rotation = Quaternion(5.6878605e-07, -1.0780409e-08, 0.39867124, 0.91709393)
 bones/20/scale = Vector3(1.0000001, 0.99999994, 1)
 
-[node name="Body_low_002" parent="VisalRotated/Cheval_animated/Armature/Skeleton3D" index="0" unique_id=1550395324]
+[node name="Body_low_002" parent="VisalRotated/Cheval_animated/Armature/Skeleton3D" index="0" unique_id=606928351]
 material_override = SubResource("StandardMaterial3D_ohlj3")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="VisalRotated" unique_id=530511716]

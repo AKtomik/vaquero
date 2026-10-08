@@ -17,17 +17,31 @@ extends CharacterBody3D
 @onready var horse_player: AudioStreamPlayer3D = $HorsePlayer
 @onready var neigh_timer: Timer = $NeighTimer
 
+@export_flags_3d_physics var ground_physics
+var camera: Camera3D
+
 var last_facing: Vector2
 
 func _ready() -> void:
 	galop_player.stream = sfx_galop
+	camera = get_viewport().get_camera_3d()
 
 
 func _physics_process(delta: float) -> void:
 	if not is_on_floor(): velocity += get_gravity() * delta
 	
 	if (!level || !level.cinematic):
-		var input_dir := Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
+		var input_dir: Vector2
+		
+		# mouse move
+		if (Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT)):
+			var click_pos = ray_cat()
+			var toward = position.direction_to(click_pos)
+			input_dir = Vector2(toward.x, toward.z)
+		
+		# keyboard move
+		if (!input_dir): input_dir = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
+		
 		var direction := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 		if direction:
 			if (!level.started): level.start()
@@ -65,9 +79,20 @@ func _physics_process(delta: float) -> void:
 		walk_animation.stop()
 		walk_animation.seek(.6, true)
 
-		
 	move_and_slide()
 
+func ray_cat() -> Vector3:
+	var space_state = get_world_3d().direct_space_state
+	var mouse_position = get_viewport().get_mouse_position()
+	
+	var from_vector = camera.project_ray_origin(mouse_position)
+	var to_vector = from_vector + camera.project_ray_normal(mouse_position) * 1000
+	var query = PhysicsRayQueryParameters3D.create(from_vector, to_vector, ground_physics)
+	query.collide_with_areas = true
+	
+	var result = space_state.intersect_ray(query)
+	if (result.is_empty()): return Vector3()
+	return result.get("position")
 
 func _on_neigh_timer_timeout() -> void:
 	

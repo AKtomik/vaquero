@@ -4,16 +4,17 @@
 
 [node name="CameraThings" type="Node" unique_id=774152112]
 
-[node name="FollowCamera" type="Camera3D" parent="." unique_id=2081140864 node_paths=PackedStringArray("magnet_position", "starting_position")]
+[node name="Camera" type="Camera3D" parent="." unique_id=2081140864 node_paths=PackedStringArray("magnet_position", "starting_position")]
+unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 0.70710677, 0.70710677, 0, -0.70710677, 0.70710677, 0, 20, 20)
 script = ExtResource("1_uau2g")
 magnet_position = NodePath("../CameraMagnet")
+starting_position = NodePath("../CameraStarting")
 ALIGN_SPEED = 0.07
 CINEMATIC_SPEED = 0.4
 MIDDLE_RATIO = 0.75
 FOLLOW_EXAGERATION = 3.0
 Y_LOCK_ENABLED = true
-starting_position = NodePath("../CameraStarting")
 
 [node name="CameraMagnet" type="Node3D" parent="." unique_id=1222203872]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 17.46767)
