@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://cv1sqas3psesp"
-path="res://.godot/imported/Cheval.fbx-0472aace98f21d3ab1ce1eed086fb8af.scn"
+path="res://.godot/imported/Cheval.fbx-cff1f33ff349c7ccce0f34bb1517971e.scn"
 
 [deps]
 
-source_file="res://assets/models/horse/Cheval.fbx"
-dest_files=["res://.godot/imported/Cheval.fbx-0472aace98f21d3ab1ce1eed086fb8af.scn"]
+source_file="res://assets/models/cheval/Cheval.fbx"
+dest_files=["res://.godot/imported/Cheval.fbx-cff1f33ff349c7ccce0f34bb1517971e.scn"]
 
 [params]
 

@@ -2,9 +2,9 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://kqs1rv8eeiep"
-path.s3tc="res://.godot/imported/Material.001_Normal.png-eed2444bc4b114e14cf02b28cc918c7c.s3tc.ctex"
-path.etc2="res://.godot/imported/Material.001_Normal.png-eed2444bc4b114e14cf02b28cc918c7c.etc2.ctex"
+uid="uid://c2nwajsxyah4v"
+path.s3tc="res://.godot/imported/Material.001_OcclusionRoughnessMetallic.png-a67aa44cc2bf85c68fbc982208f2fd42.s3tc.ctex"
+path.etc2="res://.godot/imported/Material.001_OcclusionRoughnessMetallic.png-a67aa44cc2bf85c68fbc982208f2fd42.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/models/horse/Material.001_Normal.png"
-dest_files=["res://.godot/imported/Material.001_Normal.png-eed2444bc4b114e14cf02b28cc918c7c.s3tc.ctex", "res://.godot/imported/Material.001_Normal.png-eed2444bc4b114e14cf02b28cc918c7c.etc2.ctex"]
+source_file="res://assets/models/cheval/Material.001_OcclusionRoughnessMetallic.png"
+dest_files=["res://.godot/imported/Material.001_OcclusionRoughnessMetallic.png-a67aa44cc2bf85c68fbc982208f2fd42.s3tc.ctex", "res://.godot/imported/Material.001_OcclusionRoughnessMetallic.png-a67aa44cc2bf85c68fbc982208f2fd42.etc2.ctex"]
 
 [params]
 
@@ -28,7 +28,7 @@ compress/channel_pack=0
 mipmaps/generate=true
 mipmaps/limit=-1
 roughness/mode=1
-roughness/src_normal="res://models/horse/Material.001_Normal.png"
+roughness/src_normal="res://assets/models/cheval/Material.001_OcclusionRoughnessMetallic.png"
 process/channel_remap/red=0
 process/channel_remap/green=1
 process/channel_remap/blue=2

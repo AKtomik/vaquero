@@ -2,9 +2,9 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c2nwajsxyah4v"
-path.s3tc="res://.godot/imported/Material.001_OcclusionRoughnessMetallic.png-9269f497c791931d99024ab4836f1747.s3tc.ctex"
-path.etc2="res://.godot/imported/Material.001_OcclusionRoughnessMetallic.png-9269f497c791931d99024ab4836f1747.etc2.ctex"
+uid="uid://cbf4c3gb0vn15"
+path.s3tc="res://.godot/imported/Material.001_BaseColor.png-b136d259ba4bd7ddc34e84de6ab6e605.s3tc.ctex"
+path.etc2="res://.godot/imported/Material.001_BaseColor.png-b136d259ba4bd7ddc34e84de6ab6e605.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/models/horse/Material.001_OcclusionRoughnessMetallic.png"
-dest_files=["res://.godot/imported/Material.001_OcclusionRoughnessMetallic.png-9269f497c791931d99024ab4836f1747.s3tc.ctex", "res://.godot/imported/Material.001_OcclusionRoughnessMetallic.png-9269f497c791931d99024ab4836f1747.etc2.ctex"]
+source_file="res://assets/models/cheval/Material.001_BaseColor.png"
+dest_files=["res://.godot/imported/Material.001_BaseColor.png-b136d259ba4bd7ddc34e84de6ab6e605.s3tc.ctex", "res://.godot/imported/Material.001_BaseColor.png-b136d259ba4bd7ddc34e84de6ab6e605.etc2.ctex"]
 
 [params]
 

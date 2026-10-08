@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://75wf2fkcgd2q"]
 
-[ext_resource type="PackedScene" uid="uid://cv1sqas3psesp" path="res://assets/models/horse/Cheval.fbx" id="2_g2els"]
+[ext_resource type="PackedScene" uid="uid://bst4ah16b0b3b" path="res://assets/models/cheval/Cheval_animated.fbx" id="2_c5rqy"]
 [ext_resource type="Script" uid="uid://b7ygxlcy10sun" path="res://scripts/entities/horse.gd" id="2_qhqgy"]
-[ext_resource type="Texture2D" uid="uid://cbf4c3gb0vn15" path="res://assets/models/horse/Material.001_BaseColor.png" id="3_qlg0r"]
-[ext_resource type="Texture2D" uid="uid://c2nwajsxyah4v" path="res://assets/models/horse/Material.001_OcclusionRoughnessMetallic.png" id="4_tuyoq"]
-[ext_resource type="Texture2D" uid="uid://kqs1rv8eeiep" path="res://assets/models/horse/Material.001_Normal.png" id="5_fjrip"]
+[ext_resource type="Texture2D" uid="uid://cbf4c3gb0vn15" path="res://assets/models/cheval/Material.001_BaseColor.png" id="3_qlg0r"]
+[ext_resource type="Texture2D" uid="uid://c2nwajsxyah4v" path="res://assets/models/cheval/Material.001_OcclusionRoughnessMetallic.png" id="4_tuyoq"]
+[ext_resource type="Texture2D" uid="uid://kqs1rv8eeiep" path="res://assets/models/cheval/Material.001_Normal.png" id="5_n5sgd"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_g2els"]
 radius = 7.0
@@ -12,16 +12,17 @@ radius = 7.0
 [sub_resource type="SphereShape3D" id="SphereShape3D_bfnls"]
 radius = 0.7
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qhqgy"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3a66w"]
 albedo_texture = ExtResource("3_qlg0r")
 metallic = 1.0
 metallic_texture = ExtResource("4_tuyoq")
+roughness_texture = ExtResource("4_tuyoq")
 normal_enabled = true
-normal_texture = ExtResource("5_fjrip")
+normal_texture = ExtResource("5_n5sgd")
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_bfnls"]
 
-[node name="PlayerHorse" type="CharacterBody3D" unique_id=421952062 node_paths=PackedStringArray("visual_rotated")]
+[node name="PlayerHorse" type="CharacterBody3D" unique_id=421952062 node_paths=PackedStringArray("visual_rotated", "animation")]
 collision_layer = 4
 collision_mask = 27
 axis_lock_angular_x = true
@@ -31,6 +32,7 @@ SPEED_MAX = 15.0
 SPEED_ACCELERATION = 0.8
 SPEED_DECELERATION = 0.06
 visual_rotated = NodePath("VisalRotated")
+animation = NodePath("VisalRotated/Cheval_animated/AnimationPlayer")
 
 [node name="DetectionRange" type="Area3D" parent="." unique_id=1335660236]
 collision_layer = 256
@@ -46,11 +48,61 @@ shape = SubResource("SphereShape3D_bfnls")
 
 [node name="VisalRotated" type="Node3D" parent="." unique_id=1786192518]
 
-[node name="Cheval" parent="VisalRotated" unique_id=1348041314 instance=ExtResource("2_g2els")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, -0.7, 0)
+[node name="Cheval_animated" parent="VisalRotated" unique_id=709836439 instance=ExtResource("2_c5rqy")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, -0.7, 0)
 
-[node name="Body_low_002" parent="VisalRotated/Cheval" index="0" unique_id=1737192877]
-material_override = SubResource("StandardMaterial3D_qhqgy")
+[node name="Skeleton3D" parent="VisalRotated/Cheval_animated/Armature" parent_id_path=PackedInt32Array(709836439, 1475344614) index="0" unique_id=920884271]
+bones/1/position = Vector3(0.0031771325, -6.878345e-05, 0.0008782426)
+bones/1/rotation = Quaternion(0.49145338, 0.50840294, -0.49145314, -0.5084033)
+bones/1/scale = Vector3(1.0000001, 1.0000001, 1.0000002)
+bones/2/position = Vector3(1.2201876e-09, 0.016165478, 2.8531416e-10)
+bones/2/rotation = Quaternion(1.416201e-07, 3.2703127e-07, -0.18628305, 0.98249614)
+bones/2/scale = Vector3(0.9999999, 0.9999998, 1)
+bones/3/position = Vector3(-3.2298908e-09, 0.0068417704, 5.960059e-11)
+bones/3/rotation = Quaternion(5.759092e-07, 9.210309e-10, -0.39867124, 0.91709393)
+bones/3/scale = Vector3(1.0000001, 0.99999994, 1)
+bones/5/position = Vector3(-3.0985924e-16, 0.009527393, -2.5438665e-09)
+bones/5/rotation = Quaternion(0.04671497, -3.0610828e-08, -1.5069295e-08, 0.9989083)
+bones/5/scale = Vector3(1, 1, 1.0000001)
+bones/6/position = Vector3(0.0063367505, 0.015880223, -0.0014088248)
+bones/6/rotation = Quaternion(-0.59246963, -0.24453308, 0.7011996, 0.31225404)
+bones/6/scale = Vector3(0.9999998, 0.99999994, 1.0000001)
+bones/7/position = Vector3(1.1348945e-09, 0.014355223, 4.4861857e-11)
+bones/7/rotation = Quaternion(-0.09048922, 0.0039812685, 0.04186948, 0.995009)
+bones/7/scale = Vector3(1.0000001, 1.0000001, 0.9999998)
+bones/8/position = Vector3(-2.329024e-09, 0.005979251, -6.2183053e-10)
+bones/8/rotation = Quaternion(3.101803e-07, 2.8924964e-08, -0.41695794, 0.9089258)
+bones/8/scale = Vector3(1, 1, 1)
+bones/10/position = Vector3(3.2726402e-16, 0.010134246, 2.6409883e-09)
+bones/10/rotation = Quaternion(0.4485958, 8.3263e-09, -1.5427531e-07, 0.89373475)
+bones/10/scale = Vector3(1, 0.9999999, 0.99999994)
+bones/11/position = Vector3(4.66599e-16, 0.01155387, 2.4085745e-10)
+bones/11/rotation = Quaternion(-0.13303329, 6.4577044e-08, 3.584376e-08, 0.9911116)
+bones/11/scale = Vector3(1, 0.99999976, 0.9999998)
+bones/12/position = Vector3(-1.3155076e-15, 0.012602388, -1.2067963e-09)
+bones/12/rotation = Quaternion(-0.7071399, 9.243329e-08, 5.2011547e-08, 0.7070736)
+bones/12/scale = Vector3(1, 0.99999994, 1.0000001)
+bones/14/position = Vector3(-0.006336759, 0.015880222, -0.0014088219)
+bones/14/rotation = Quaternion(-0.34800354, 0.5382475, -0.39886817, 0.65581053)
+bones/14/scale = Vector3(0.99999994, 1, 1)
+bones/15/position = Vector3(-3.3967756e-11, 0.01435522, 3.75093e-10)
+bones/15/rotation = Quaternion(-0.09048921, -0.003981317, -0.0418695, 0.99500895)
+bones/15/scale = Vector3(0.99999994, 0.99999994, 1.0000001)
+bones/16/position = Vector3(-2.5163566e-10, 0.0059792516, -1.2489502e-10)
+bones/16/rotation = Quaternion(3.401308e-07, -4.733785e-08, 0.41695794, 0.9089258)
+bones/16/scale = Vector3(1, 1.0000001, 1)
+bones/18/position = Vector3(-0.0031771378, -6.8783695e-05, 0.0008782436)
+bones/18/rotation = Quaternion(0.6860297, -0.17135775, 0.6860295, -0.17135797)
+bones/18/scale = Vector3(1.0000001, 1.0000002, 1.0000002)
+bones/19/position = Vector3(-7.537835e-12, 0.016165476, 3.0828418e-10)
+bones/19/rotation = Quaternion(1.334297e-07, -4.4093386e-07, 0.18628305, 0.98249614)
+bones/19/scale = Vector3(0.9999999, 0.9999998, 1)
+bones/20/position = Vector3(2.8119598e-09, 0.0068417727, 5.9601095e-11)
+bones/20/rotation = Quaternion(5.6878605e-07, -1.0780409e-08, 0.39867124, 0.91709393)
+bones/20/scale = Vector3(1.0000001, 0.99999994, 1)
+
+[node name="Body_low_002" parent="VisalRotated/Cheval_animated/Armature/Skeleton3D" index="0" unique_id=1550395324]
+material_override = SubResource("StandardMaterial3D_3a66w")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="VisalRotated" unique_id=530511716]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
@@ -68,4 +120,4 @@ autostart = true
 
 [connection signal="timeout" from="NeighTimer" to="." method="_on_neigh_timer_timeout"]
 
-[editable path="VisalRotated/Cheval"]
+[editable path="VisalRotated/Cheval_animated"]
