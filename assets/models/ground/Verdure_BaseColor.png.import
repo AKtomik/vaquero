@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://bbdljhu1wh6il"
 path.s3tc="res://.godot/imported/Verdure_BaseColor.png-5e4f7a3992d1f496c18ffd2955b3f421.s3tc.ctex"
+path.etc2="res://.godot/imported/Verdure_BaseColor.png-5e4f7a3992d1f496c18ffd2955b3f421.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/models/ground/Verdure_BaseColor.png"
-dest_files=["res://.godot/imported/Verdure_BaseColor.png-5e4f7a3992d1f496c18ffd2955b3f421.s3tc.ctex"]
+dest_files=["res://.godot/imported/Verdure_BaseColor.png-5e4f7a3992d1f496c18ffd2955b3f421.s3tc.ctex", "res://.godot/imported/Verdure_BaseColor.png-5e4f7a3992d1f496c18ffd2955b3f421.etc2.ctex"]
 
 [params]
 

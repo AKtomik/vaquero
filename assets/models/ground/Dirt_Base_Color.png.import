@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://d2vk8l2k81f4n"
 path.s3tc="res://.godot/imported/Dirt_Base_Color.png-df00512e63d3f12b88800f94822b1def.s3tc.ctex"
+path.etc2="res://.godot/imported/Dirt_Base_Color.png-df00512e63d3f12b88800f94822b1def.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/models/ground/Dirt_Base_Color.png"
-dest_files=["res://.godot/imported/Dirt_Base_Color.png-df00512e63d3f12b88800f94822b1def.s3tc.ctex"]
+dest_files=["res://.godot/imported/Dirt_Base_Color.png-df00512e63d3f12b88800f94822b1def.s3tc.ctex", "res://.godot/imported/Dirt_Base_Color.png-df00512e63d3f12b88800f94822b1def.etc2.ctex"]
 
 [params]
 
