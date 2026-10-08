@@ -10,7 +10,7 @@ func level_end():
 	if score_current >= score_goal:
 		sfx_player.stream = sfx_victory
 		sfx_player.play()
-		$CanvasLayer/ChallengeScore/Label.text = "YOUR TIME: %d sec"%progress_seconds
+		$CanvasLayer/ChallengeScore/Label.text = "TON TEMPS : %d sec"%progress_seconds
 		$CanvasLayer/ChallengeScore.visible = true
 		end_delay_timer.start()
 		

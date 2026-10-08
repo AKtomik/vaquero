@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://b4tslhfbcnaxb"
-path="res://.godot/imported/Niagara.ttf-d8d3eec456d6a7e40c14e704ea61f5df.fontdata"
+uid="uid://ph7cqyrd6bix"
+path="res://.godot/imported/Niagara Solid.TTF-63b5d20ee8bcd595b659903405b29d07.fontdata"
 
 [deps]
 
-source_file="res://assets/UI/fonts/Niagara.ttf"
-dest_files=["res://.godot/imported/Niagara.ttf-d8d3eec456d6a7e40c14e704ea61f5df.fontdata"]
+source_file="res://assets/UI/fonts/Niagara Solid.TTF"
+dest_files=["res://.godot/imported/Niagara Solid.TTF-63b5d20ee8bcd595b659903405b29d07.fontdata"]
 
 [params]
 
