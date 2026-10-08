@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://de4ibga5ja0qu"]
+
+[ext_resource type="PackedScene" uid="uid://dcvb5n7yumtqu" path="res://assets/models/grass/Gazon.fbx" id="1_hdhnr"]
+[ext_resource type="Texture2D" uid="uid://bvx273e6agrqx" path="res://assets/models/grass/M_Gazon_BaseColor.png" id="2_gaeul"]
+[ext_resource type="Texture2D" uid="uid://lv1fgk16wlca" path="res://assets/models/grass/M_Gazon_OcclusionRoughnessMetallic.png" id="3_6nlly"]
+[ext_resource type="Texture2D" uid="uid://c2i1mnba2vffe" path="res://assets/models/grass/M_Gazon_Normal.png" id="4_2deb7"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s4teg"]
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+cull_mode = 2
+albedo_color = Color(1.5561339, 0.9392886, 0.47815192, 1)
+albedo_texture = ExtResource("2_gaeul")
+metallic = 1.0
+metallic_texture = ExtResource("3_6nlly")
+roughness_texture = ExtResource("3_6nlly")
+normal_enabled = true
+normal_texture = ExtResource("4_2deb7")
+
+[node name="Grass" type="StaticBody3D" unique_id=454719588 groups=["obstacles"]]
+collision_layer = 2
+collision_mask = 12
+
+[node name="Gazon" parent="." unique_id=231303748 instance=ExtResource("1_hdhnr")]
+
+[node name="Gazon" parent="Gazon" index="0" unique_id=1368158744]
+transform = Transform3D(200, -1.7484559e-05, 1.7484555e-05, -1.7484555e-05, -200, -3.019916e-05, 1.7484559e-05, 3.0199157e-05, -200, 0, -0.7, 0)
+material_override = SubResource("StandardMaterial3D_s4teg")
+
+[editable path="Gazon"]
