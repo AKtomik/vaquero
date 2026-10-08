@@ -33,6 +33,7 @@ var ambient_player: AudioStreamPlayer
 var cinematic = true
 var started = false
 var ended = false
+var if_waiting_input_for_start = true
 
 # Timer to add a delay at the end of the level
 var end_delay_timer: Timer
@@ -63,6 +64,14 @@ func setup():
 	end_delay_timer.wait_time = 3
 	add_child(end_delay_timer)
 	end_delay_timer.timeout.connect(_on_end_delay_timeout)
+
+func cinematic_end():
+	if (!if_waiting_input_for_start):
+			start()
+			return
+	cinematic = false
+	started = false
+	ui_node.visible = true
 
 func start():
 	cinematic = false

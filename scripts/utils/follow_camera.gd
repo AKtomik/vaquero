@@ -38,6 +38,6 @@ func _process(_delta: float) -> void:
 		position_followed = position_followed.move_toward(ideal_position, ALIGN_SPEED)
 		if (unalignement.length() < .1):
 			position_followed = ideal_position
-			level.start()
+			level.cinematic_end()
 	
 	if (Y_LOCK_ENABLED): position.y = y_lock_value

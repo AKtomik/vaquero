@@ -26,10 +26,11 @@ func _ready() -> void:
 func _physics_process(delta: float) -> void:
 	if not is_on_floor(): velocity += get_gravity() * delta
 	
-	if (!level || level.started):
+	if (!level || !level.cinematic):
 		var input_dir := Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
 		var direction := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 		if direction:
+			if (!level.started): level.start()
 			velocity.x = move_toward(velocity.x, direction.x * SPEED_MAX, SPEED_ACCELERATION)
 			velocity.z = move_toward(velocity.z, direction.z * SPEED_MAX, SPEED_ACCELERATION)
 		else:
