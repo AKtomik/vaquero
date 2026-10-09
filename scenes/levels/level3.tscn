@@ -35,12 +35,13 @@ ambient = ExtResource("5_522sc")
 
 [node name="CommonLevel" parent="." unique_id=96974107 instance=ExtResource("6_a82vw")]
 
-[node name="Player" parent="." unique_id=421952062 instance=ExtResource("4_t14x3")]
+[node name="Player" parent="." unique_id=421952062 node_paths=PackedStringArray("level") instance=ExtResource("4_t14x3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7994308, 0)
+level = NodePath("..")
 
 [node name="CameraThings" parent="." unique_id=774152112 instance=ExtResource("5_ahaer")]
 
-[node name="FollowCamera" parent="CameraThings" index="0" unique_id=2081140864 node_paths=PackedStringArray("level", "follow_node")]
+[node name="Camera" parent="CameraThings" index="0" unique_id=2081140864 node_paths=PackedStringArray("level", "follow_node")]
 level = NodePath("../..")
 follow_node = NodePath("../../Player")
 
