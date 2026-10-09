@@ -20,9 +20,12 @@
 [ext_resource type="Texture2D" uid="uid://d0mcj7p5xsvt8" path="res://assets/UI/quit_hover.png" id="17_dbo71"]
 [ext_resource type="PackedScene" uid="uid://jf1c63gatqdj" path="res://scenes/ui/game_ui.tscn" id="17_u0jw0"]
 
-[node name="LevelRoot" type="Node3D" unique_id=1058585129 node_paths=PackedStringArray("sun_node", "pen_node", "ui_node")]
+[node name="LevelRoot" type="Node3D" unique_id=1058585129 node_paths=PackedStringArray("parent_cow", "respawn_nodes_parent", "sun_node", "pen_node", "ui_node")]
 script = ExtResource("1_vyech")
-duration_seconds = 120.0
+scene_cow = ExtResource("16_8tiyy")
+parent_cow = NodePath("Cows/NewCows")
+respawn_nodes_parent = NodePath("Cows/FirstCows")
+duration_seconds = 180.0
 score_goal = -1
 do_good_score_end = false
 sun_node = NodePath("Sun")
@@ -42,7 +45,8 @@ level = NodePath("..")
 [node name="Camera" parent="CameraThings" index="0" unique_id=2081140864 node_paths=PackedStringArray("level", "follow_node")]
 level = NodePath("../..")
 follow_node = NodePath("../../Player")
-MIDDLE_RATIO = 0.99
+MIDDLE_RATIO = 1.0
+FOLLOW_EXAGERATION = 2.0
 
 [node name="CameraStarting" parent="CameraThings" index="2" unique_id=826343550]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -135.07617)
@@ -704,6 +708,8 @@ transform = Transform3D(0.9388043, 0, 0.34445086, 0, 1, 0, -0.34445086, 0, 0.938
 
 [node name="Cow100" parent="Cows/FirstCows" unique_id=1251137325 instance=ExtResource("16_8tiyy")]
 transform = Transform3D(0.9388043, 0, 0.34445086, 0, 1, 0, -0.34445086, 0, 0.9388043, 13.251072, 0.9999809, 21.432137)
+
+[node name="NewCows" type="Node3D" parent="Cows" unique_id=1544033274]
 
 [node name="Sun" type="DirectionalLight3D" parent="." unique_id=621823940]
 transform = Transform3D(0.743921, -0.37955108, -0.5500206, 0.6403339, 0.64033383, 0.42419934, 0.1911915, -0.6677676, 0.7193971, 0, 6.6657405, 0)

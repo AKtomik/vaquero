@@ -1,10 +1,17 @@
 class_name Challenge
 extends Level
 
-@onready var scene_challenge: PackedScene = preload("res://scenes/levels/challenge.tscn")
+@export var scene_cow: PackedScene
+@export var parent_cow: Node3D
+
+@export var respawn_nodes_parent: Node3D
+var respawn_points: Array = []
+
 @export var do_end_to_menu = false
 
-#@export var respawn_points = Array[Node3D]
+func _ready() -> void:
+	super._ready()
+	respawn_points = respawn_nodes_parent.get_children().map(func(n: Node3D): return Vector3(n.position.x, n.position.y, n.position.z))
 
 func level_end():
 	print("challenge end! score: ", score_current, " (fake goal", score_goal,")")
@@ -31,3 +38,11 @@ func _on_end_delay_timeout():
 
 func _on_quit_button_pressed() -> void:
 	GameOverlord.end_challenge()
+
+func add_score():
+	super.add_score()
+	var respawn = respawn_points.pick_random()
+	var cow = scene_cow.instantiate()
+	parent_cow.add_child(cow)
+	cow.position = respawn
+	print("spawn cow:", cow, " at:", respawn)
