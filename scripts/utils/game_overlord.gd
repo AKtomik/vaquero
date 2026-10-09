@@ -11,7 +11,7 @@ extends Node
 @onready var game_over_scene = preload("res://scenes/narrative/game_over.tscn")
 
 var game_over_text = ""
-var game_finished_once = true
+var game_finished_once = false
 var loyauty: int = 0
 var last_level: int = 0
 var last_score: int = 0
@@ -29,8 +29,7 @@ func end_game() -> void:
 	last_level = 0
 	last_score = 0
 	total_score = 0
-	if not game_finished_once:
-		game_finished_once = true
+	game_finished_once = true
 		
 	get_tree().change_scene_to_packed(menu_scene)
 	

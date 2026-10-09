@@ -16,15 +16,17 @@ func _ready() -> void:
 	MusicPlayer.play_music_start()
 	
 	if GameOverlord.game_finished_once:
-		print("test")
+		print("challenge aviable")
 		$CanvasLayer/Challenge.disabled = false
+		$CanvasLayer/Challenge.visible = true
 	else:
 		print("no challenge")
 		$CanvasLayer/Challenge.disabled = true
+		$CanvasLayer/Challenge.visible = false
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	pass
 
 func _on_start_pressed() -> void:
