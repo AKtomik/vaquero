@@ -32,14 +32,16 @@ dialog_failure = ExtResource("3_jemr8")
 
 [node name="CommonLevel" parent="." unique_id=96974107 instance=ExtResource("6_axp3e")]
 
-[node name="Player" parent="." unique_id=421952062 instance=ExtResource("7_0af4i")]
+[node name="Player" parent="." unique_id=421952062 node_paths=PackedStringArray("level") instance=ExtResource("7_0af4i")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7994308, 0)
+level = NodePath("..")
 
 [node name="CameraThings" parent="." unique_id=774152112 instance=ExtResource("8_4c581")]
 
 [node name="Camera" parent="CameraThings" index="0" unique_id=2081140864 node_paths=PackedStringArray("level", "follow_node")]
 level = NodePath("../..")
 follow_node = NodePath("../../Player")
+MIDDLE_RATIO = 0.99
 
 [node name="CameraStarting" parent="CameraThings" index="2" unique_id=826343550]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -135.07617)
@@ -50,6 +52,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -135.07617)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.747818, 0, -0.562294)
 
 [node name="Walls" type="Node3D" parent="Map" unique_id=1735474549]
+transform = Transform3D(2.2572398, 0, 0, 0, 2.2572398, 0, 0, 0, 2.2572398, -6.7442074, 0, 98.7037)
 
 [node name="RokSimpleDown" parent="Map/Walls" unique_id=1297683498 instance=ExtResource("10_cxgei")]
 transform = Transform3D(1.0861182, 0, -1.3580294, 0, 0.63458365, 0, 1.1105493, 0, 1.328154, -90.66997, 5.052685e-06, -6.737114)
@@ -194,7 +197,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -75.75689, -1.9073486e-06, -4
 transform = Transform3D(0.66758525, 0, 0.74453336, 0, 1, 0, -0.74453336, 0, 0.66758525, -10.474557, -1.9073486e-06, -45.362366)
 
 [node name="Cactus2" parent="Map/Obstacles/Wave2" unique_id=728059152 instance=ExtResource("14_kf2f6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 61.858223, -1.9073486e-06, -57.147144)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 58.349533, -1.9073486e-06, -81.28586)
 
 [node name="Cactus3" parent="Map/Obstacles/Wave2" unique_id=1561639296 instance=ExtResource("14_kf2f6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 51.456074, -1.9073486e-06, -96.85123)
@@ -219,125 +222,307 @@ transform = Transform3D(0.4180309, 0, 0.90843284, 0, 1, 0, -0.90843284, 0, 0.418
 
 [node name="Cows" type="Node3D" parent="." unique_id=1804944878]
 
-[node name="Cow" parent="Cows" unique_id=869209800 instance=ExtResource("16_8tiyy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.72507, 1, -18.74133)
+[node name="FirstCows" type="Node3D" parent="Cows" unique_id=784663719]
 
-[node name="Cow2" parent="Cows" unique_id=87475227 instance=ExtResource("16_8tiyy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38.68214, 1, -34.972256)
+[node name="Cow" parent="Cows/FirstCows" unique_id=869209800 instance=ExtResource("16_8tiyy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 116.14928, 1, -3.067646)
 
-[node name="Cow3" parent="Cows" unique_id=1162523427 instance=ExtResource("16_8tiyy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.289894, 1, -37.45742)
+[node name="Cow2" parent="Cows/FirstCows" unique_id=162588487 instance=ExtResource("16_8tiyy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 110.24346, 1, -33.349224)
 
-[node name="Cow7" parent="Cows" unique_id=87686347 instance=ExtResource("16_8tiyy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.243042, 1, -53.973156)
+[node name="Cow3" parent="Cows/FirstCows" unique_id=1397360890 instance=ExtResource("16_8tiyy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 122.62369, 1, -33.580814)
 
-[node name="Cow25" parent="Cows" unique_id=1873444756 instance=ExtResource("16_8tiyy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4034481, 1, -58.36583)
+[node name="Cow4" parent="Cows/FirstCows" unique_id=1252259382 instance=ExtResource("16_8tiyy")]
+transform = Transform3D(0.561719, 0, 0.8273281, 0, 1, 0, -0.8273281, 0, 0.561719, 58.116512, 1, 36.968582)
 
-[node name="Cow26" parent="Cows" unique_id=676334081 instance=ExtResource("16_8tiyy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -33.626892, 1, -70.98239)
+[node name="Cow5" parent="Cows/FirstCows" unique_id=1079342799 instance=ExtResource("16_8tiyy")]
+transform = Transform3D(0.561719, 0, 0.8273281, 0, 1, 0, -0.8273281, 0, 0.561719, 100.97982, 1, 26.245975)
 
-[node name="Cow27" parent="Cows" unique_id=146639572 instance=ExtResource("16_8tiyy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -62.34662, 1, -35.786896)
+[node name="Cow6" parent="Cows/FirstCows" unique_id=1067900204 instance=ExtResource("16_8tiyy")]
+transform = Transform3D(0.561719, 0, 0.8273281, 0, 1, 0, -0.8273281, 0, 0.561719, 47.490906, 1, -1.5342035)
 
-[node name="Cow28" parent="Cows" unique_id=869158450 instance=ExtResource("16_8tiyy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -80.371506, 1, -70.39395)
+[node name="Cow7" parent="Cows/FirstCows" unique_id=1902641420 instance=ExtResource("16_8tiyy")]
+transform = Transform3D(0.5974301, 0, -0.801921, 0, 1, 0, 0.801921, 0, 0.5974301, -52.668053, 1, 33.224037)
 
-[node name="Cow29" parent="Cows" unique_id=1381984619 instance=ExtResource("16_8tiyy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39.720276, 1, -176.71394)
+[node name="Cow8" parent="Cows/FirstCows" unique_id=1451605315 instance=ExtResource("16_8tiyy")]
+transform = Transform3D(0.5974301, 0, -0.801921, 0, 1, 0, 0.801921, 0, 0.5974301, -50.335148, 1, 46.333828)
 
-[node name="Cow30" parent="Cows" unique_id=2009340738 instance=ExtResource("16_8tiyy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.082504, 1, -13.370438)
+[node name="Cow9" parent="Cows/FirstCows" unique_id=747534551 instance=ExtResource("16_8tiyy")]
+transform = Transform3D(0.5974301, 0, -0.801921, 0, 1, 0, 0.801921, 0, 0.5974301, -29.932318, 1, 78.29895)
 
-[node name="Cow8" parent="Cows" unique_id=1607454763 instance=ExtResource("16_8tiyy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 35.899956, 1, -3.4078255)
+[node name="Cow10" parent="Cows/FirstCows" unique_id=1455485624 instance=ExtResource("16_8tiyy")]
+transform = Transform3D(0.5974301, 0, -0.801921, 0, 1, 0, 0.801921, 0, 0.5974301, -178.264, 0.9999962, -1.8146629)
 
-[node name="Cow4" parent="Cows" unique_id=1862192084 instance=ExtResource("16_8tiyy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.879284, 1, -19.884392)
+[node name="Cow11" parent="Cows/FirstCows" unique_id=1429080708 instance=ExtResource("16_8tiyy")]
+transform = Transform3D(0.5974301, 0, -0.801921, 0, 1, 0, 0.801921, 0, 0.5974301, -175.93112, 0.9999962, 11.295128)
 
-[node name="Cow5" parent="Cows" unique_id=2002724400 instance=ExtResource("16_8tiyy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.078569, 0.9999962, -27.692345)
+[node name="Cow12" parent="Cows/FirstCows" unique_id=734795655 instance=ExtResource("16_8tiyy")]
+transform = Transform3D(0.5974301, 0, -0.801921, 0, 1, 0, 0.801921, 0, 0.5974301, -107.643875, 1, 17.61401)
 
-[node name="Cow6" parent="Cows" unique_id=83198855 instance=ExtResource("16_8tiyy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -52.457584, 0.9999962, -80.360115)
+[node name="Cow13" parent="Cows/FirstCows" unique_id=836106020 instance=ExtResource("16_8tiyy")]
+transform = Transform3D(0.5974301, 0, -0.801921, 0, 1, 0, 0.801921, 0, 0.5974301, -192.28693, 0.99998474, -64.00883)
 
-[node name="Cow9" parent="Cows" unique_id=1958880407 instance=ExtResource("16_8tiyy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -63.85491, 0.9999962, -52.0438)
+[node name="Cow14" parent="Cows/FirstCows" unique_id=858384307 instance=ExtResource("16_8tiyy")]
+transform = Transform3D(0.5974301, 0, -0.801921, 0, 1, 0, 0.801921, 0, 0.5974301, -189.95403, 0.99998474, -50.899036)
 
-[node name="Cow10" parent="Cows" unique_id=88435480 instance=ExtResource("16_8tiyy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -41.286495, 0.9999962, -25.154022)
+[node name="Cow15" parent="Cows/FirstCows" unique_id=263682778 instance=ExtResource("16_8tiyy")]
+transform = Transform3D(0.5974301, 0, -0.801921, 0, 1, 0, 0.801921, 0, 0.5974301, -171.8181, 0.99998474, -50.59789)
 
-[node name="Cow11" parent="Cows" unique_id=1457448528 instance=ExtResource("16_8tiyy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -63.93173, 0.9999962, -10.703645)
+[node name="Cow16" parent="Cows/FirstCows" unique_id=1162038717 instance=ExtResource("16_8tiyy")]
+transform = Transform3D(0.5974301, 0, -0.801921, 0, 1, 0, 0.801921, 0, 0.5974301, -88.83812, 0.99998474, -183.33176)
 
-[node name="Cow12" parent="Cows" unique_id=181324351 instance=ExtResource("16_8tiyy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -37.979942, 0.9999962, -0.95709705)
+[node name="Cow17" parent="Cows/FirstCows" unique_id=2035634483 instance=ExtResource("16_8tiyy")]
+transform = Transform3D(0.5974301, 0, -0.801921, 0, 1, 0, 0.801921, 0, 0.5974301, -86.50522, 0.99998474, -170.22195)
 
-[node name="Cow13" parent="Cows" unique_id=1285228602 instance=ExtResource("16_8tiyy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.985794, 0.9999962, 9.597495)
+[node name="Cow18" parent="Cows/FirstCows" unique_id=1946124724 instance=ExtResource("16_8tiyy")]
+transform = Transform3D(0.5974301, 0, -0.801921, 0, 1, 0, 0.801921, 0, 0.5974301, -104.539055, 0.99998474, -135.44267)
 
-[node name="Cow14" parent="Cows" unique_id=1208351409 instance=ExtResource("16_8tiyy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 51.91992, 0.9999962, -67.36415)
+[node name="Cow19" parent="Cows/FirstCows" unique_id=71750857 instance=ExtResource("16_8tiyy")]
+transform = Transform3D(0.5974301, 0, -0.801921, 0, 1, 0, 0.801921, 0, 0.5974301, 54.925636, 0.9999695, -226.13216)
 
-[node name="Cow15" parent="Cows" unique_id=1599030085 instance=ExtResource("16_8tiyy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 56.913765, 0.9999962, -120.229355)
+[node name="Cow20" parent="Cows/FirstCows" unique_id=1463053599 instance=ExtResource("16_8tiyy")]
+transform = Transform3D(0.5974301, 0, -0.801921, 0, 1, 0, 0.801921, 0, 0.5974301, 98.069, 0.9999695, -199.96834)
 
-[node name="Cow16" parent="Cows" unique_id=1052290365 instance=ExtResource("16_8tiyy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 81.09613, 0.9999962, -101.164665)
+[node name="Cow21" parent="Cows/FirstCows" unique_id=1553049282 instance=ExtResource("16_8tiyy")]
+transform = Transform3D(0.5974301, 0, -0.801921, 0, 1, 0, 0.801921, 0, 0.5974301, 75.39446, 0.9999695, -212.7212)
 
-[node name="Cow17" parent="Cows" unique_id=211553704 instance=ExtResource("16_8tiyy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 64.69388, 0.9999962, -149.57129)
+[node name="Cow22" parent="Cows/FirstCows" unique_id=458797073 instance=ExtResource("16_8tiyy")]
+transform = Transform3D(0.5974301, 0, -0.801921, 0, 1, 0, 0.801921, 0, 0.5974301, 114.8869, 0.99998474, -118.635025)
 
-[node name="Cow18" parent="Cows" unique_id=2049399507 instance=ExtResource("16_8tiyy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.946114, 0.9999962, -150.05225)
+[node name="Cow23" parent="Cows/FirstCows" unique_id=1312366539 instance=ExtResource("16_8tiyy")]
+transform = Transform3D(0.5974301, 0, -0.801921, 0, 1, 0, 0.801921, 0, 0.5974301, 117.2198, 0.99998474, -105.52522)
 
-[node name="Cow19" parent="Cows" unique_id=19633879 instance=ExtResource("16_8tiyy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -44.447258, 0.9999962, -140.7597)
+[node name="Cow24" parent="Cows/FirstCows" unique_id=336737215 instance=ExtResource("16_8tiyy")]
+transform = Transform3D(0.5974301, 0, -0.801921, 0, 1, 0, 0.801921, 0, 0.5974301, 135.35573, 0.99998474, -105.224075)
 
-[node name="Cow20" parent="Cows" unique_id=1886979954 instance=ExtResource("16_8tiyy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 54.90789, 0.9999962, -43.314156)
+[node name="Cow25" parent="Cows/FirstCows" unique_id=937490914 instance=ExtResource("16_8tiyy")]
+transform = Transform3D(0.5974301, 0, -0.801921, 0, 1, 0, 0.801921, 0, 0.5974301, -3.775751, 0.99998474, 97.70138)
 
-[node name="Cow21" parent="Cows" unique_id=1300209985 instance=ExtResource("16_8tiyy")]
-transform = Transform3D(-0.61851144, 0, 0.7857758, 0, 1, 0, -0.7857758, 0, -0.61851144, 28.39479, 1, -25.336708)
+[node name="Cow26" parent="Cows/FirstCows" unique_id=1776386503 instance=ExtResource("16_8tiyy")]
+transform = Transform3D(0.5974301, 0, -0.801921, 0, 1, 0, 0.801921, 0, 0.5974301, -1.4428501, 0.99998474, 110.81118)
 
-[node name="Cow22" parent="Cows" unique_id=1022117300 instance=ExtResource("16_8tiyy")]
-transform = Transform3D(-0.61851144, 0, 0.7857758, 0, 1, 0, -0.7857758, 0, -0.61851144, 51.244858, 1, -51.421486)
+[node name="Cow27" parent="Cows/FirstCows" unique_id=969985046 instance=ExtResource("16_8tiyy")]
+transform = Transform3D(0.5974301, 0, -0.801921, 0, 1, 0, 0.801921, 0, 0.5974301, 16.693075, 0.99998474, 111.11233)
 
-[node name="Cow31" parent="Cows" unique_id=1696367990 instance=ExtResource("16_8tiyy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 60.319027, 1.0000076, -90.55515)
+[node name="Cow28" parent="Cows/FirstCows" unique_id=1668023639 instance=ExtResource("16_8tiyy")]
+transform = Transform3D(0.5974301, 0, -0.801921, 0, 1, 0, 0.801921, 0, 0.5974301, -122.44304, 0.99998474, 75.31216)
 
-[node name="Cow32" parent="Cows" unique_id=264918232 instance=ExtResource("16_8tiyy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 68.27609, 1.0000076, -106.78609)
+[node name="Cow29" parent="Cows/FirstCows" unique_id=1613892755 instance=ExtResource("16_8tiyy")]
+transform = Transform3D(0.5974301, 0, -0.801921, 0, 1, 0, 0.801921, 0, 0.5974301, -120.11014, 0.99998474, 88.42196)
 
-[node name="Cow33" parent="Cows" unique_id=971718681 instance=ExtResource("16_8tiyy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 61.88385, 1.0000076, -109.27124)
+[node name="Cow30" parent="Cows/FirstCows" unique_id=1410759373 instance=ExtResource("16_8tiyy")]
+transform = Transform3D(0.5974301, 0, -0.801921, 0, 1, 0, 0.801921, 0, 0.5974301, -101.97421, 0.99998474, 88.72311)
 
-[node name="Cow34" parent="Cows" unique_id=1863641010 instance=ExtResource("16_8tiyy")]
-transform = Transform3D(-0.61851144, 0, 0.7857758, 0, 1, 0, -0.7857758, 0, -0.61851144, 57.988747, 1.0000076, -97.15053)
+[node name="Cow31" parent="Cows/FirstCows" unique_id=1857663168 instance=ExtResource("16_8tiyy")]
+transform = Transform3D(0.28464758, 0, 0.95863223, 0, 1, 0, -0.95863223, 0, 0.28464758, 69.68001, 1, -175.60501)
 
-[node name="Cow35" parent="Cows" unique_id=2064493594 instance=ExtResource("16_8tiyy")]
-transform = Transform3D(-0.61851144, 0, 0.7857758, 0, 1, 0, -0.7857758, 0, -0.61851144, 80.83881, 1.0000076, -123.235306)
+[node name="Cow32" parent="Cows/FirstCows" unique_id=1706086305 instance=ExtResource("16_8tiyy")]
+transform = Transform3D(0.28464758, 0, 0.95863223, 0, 1, 0, -0.95863223, 0, 0.28464758, 38.970028, 1, -178.56311)
 
-[node name="Cow36" parent="Cows" unique_id=1224723856 instance=ExtResource("16_8tiyy")]
-transform = Transform3D(0.022413956, 0, -0.99974877, 0, 1, 0, 0.99974877, 0, 0.022413956, -16.02502, 1.0000076, -160.487)
+[node name="Cow33" parent="Cows/FirstCows" unique_id=1655099439 instance=ExtResource("16_8tiyy")]
+transform = Transform3D(0.28464758, 0, 0.95863223, 0, 1, 0, -0.95863223, 0, 0.28464758, 42.272022, 1, -190.4971)
 
-[node name="Cow37" parent="Cows" unique_id=614262658 instance=ExtResource("16_8tiyy")]
-transform = Transform3D(0.022413956, 0, -0.99974877, 0, 1, 0, 0.99974877, 0, 0.022413956, 0.38019335, 1.0000076, -152.89574)
+[node name="Cow34" parent="Cows/FirstCows" unique_id=102771084 instance=ExtResource("16_8tiyy")]
+transform = Transform3D(-0.63321143, 0, 0.7739789, 0, 1, 0, -0.7739789, 0, -0.63321143, -32.28232, 1, 0.35149384)
 
-[node name="Cow38" parent="Cows" unique_id=1678932659 instance=ExtResource("16_8tiyy")]
-transform = Transform3D(0.022413956, 0, -0.99974877, 0, 1, 0, 0.99974877, 0, 0.022413956, 2.7214315, 1.0000076, -159.34207)
+[node name="Cow35" parent="Cows/FirstCows" unique_id=1206116235 instance=ExtResource("16_8tiyy")]
+transform = Transform3D(-0.63321143, 0, 0.7739789, 0, 1, 0, -0.7739789, 0, -0.63321143, 93.46301, 1, -152.71904)
 
-[node name="Cow39" parent="Cows" unique_id=1352863834 instance=ExtResource("16_8tiyy")]
-transform = Transform3D(0.7717151, 0, 0.6359684, 0, 1, 0, -0.6359684, 0, 0.7717151, -9.483525, 1.0000076, -162.96452)
+[node name="Cow36" parent="Cows/FirstCows" unique_id=197893273 instance=ExtResource("16_8tiyy")]
+transform = Transform3D(-0.63321143, 0, 0.7739789, 0, 1, 0, -0.7739789, 0, -0.63321143, -72.21692, 1, -0.4221878)
 
-[node name="Cow40" parent="Cows" unique_id=1049405350 instance=ExtResource("16_8tiyy")]
-transform = Transform3D(0.7717151, 0, 0.6359684, 0, 1, 0, -0.6359684, 0, 0.7717151, 17.10686, 1.0000076, -140.70486)
+[node name="Cow37" parent="Cows/FirstCows" unique_id=1660915127 instance=ExtResource("16_8tiyy")]
+transform = Transform3D(0.9388043, 0, 0.34445086, 0, 1, 0, -0.34445086, 0, 0.9388043, 56.416927, 1, -3.44096)
 
-[node name="Cow23" parent="Cows" unique_id=902234074 instance=ExtResource("16_8tiyy")]
-transform = Transform3D(-0.61851144, 0, 0.7857758, 0, 1, 0, -0.7857758, 0, -0.61851144, 40.903236, 0.9999962, -51.936016)
+[node name="Cow38" parent="Cows/FirstCows" unique_id=222717974 instance=ExtResource("16_8tiyy")]
+transform = Transform3D(0.9388043, 0, 0.34445086, 0, 1, 0, -0.34445086, 0, 0.9388043, 69.64847, 1, -1.9456825)
 
-[node name="Cow24" parent="Cows" unique_id=1726148024 instance=ExtResource("16_8tiyy")]
-transform = Transform3D(-0.61851144, 0, 0.7857758, 0, 1, 0, -0.7857758, 0, -0.61851144, 60.344715, 0.9999962, -31.340893)
+[node name="Cow39" parent="Cows/FirstCows" unique_id=1049702370 instance=ExtResource("16_8tiyy")]
+transform = Transform3D(0.9388043, 0, 0.34445086, 0, 1, 0, -0.34445086, 0, 0.9388043, 75.0995, 1, -19.24564)
+
+[node name="Cow40" parent="Cows/FirstCows" unique_id=1377109380 instance=ExtResource("16_8tiyy")]
+transform = Transform3D(0.9388043, 0, 0.34445086, 0, 1, 0, -0.34445086, 0, 0.9388043, 7.121359, 1, 60.62197)
+
+[node name="Cow41" parent="Cows/FirstCows" unique_id=1866007276 instance=ExtResource("16_8tiyy")]
+transform = Transform3D(0.9388043, 0, 0.34445086, 0, 1, 0, -0.34445086, 0, 0.9388043, 20.352879, 1, 62.11724)
+
+[node name="Cow42" parent="Cows/FirstCows" unique_id=351438221 instance=ExtResource("16_8tiyy")]
+transform = Transform3D(0.9388043, 0, 0.34445086, 0, 1, 0, -0.34445086, 0, 0.9388043, 25.80392, 1, 44.817284)
+
+[node name="Cow43" parent="Cows/FirstCows" unique_id=1956887103 instance=ExtResource("16_8tiyy")]
+transform = Transform3D(0.9388043, 0, 0.34445086, 0, 1, 0, -0.34445086, 0, 0.9388043, -76.5358, 0.99998474, 102.72509)
+
+[node name="Cow44" parent="Cows/FirstCows" unique_id=184774679 instance=ExtResource("16_8tiyy")]
+transform = Transform3D(0.9388043, 0, 0.34445086, 0, 1, 0, -0.34445086, 0, 0.9388043, -63.304264, 0.99998474, 104.22033)
+
+[node name="Cow45" parent="Cows/FirstCows" unique_id=911953125 instance=ExtResource("16_8tiyy")]
+transform = Transform3D(0.9388043, 0, 0.34445086, 0, 1, 0, -0.34445086, 0, 0.9388043, -57.853237, 0.99998474, 86.92039)
+
+[node name="Cow46" parent="Cows/FirstCows" unique_id=1384044473 instance=ExtResource("16_8tiyy")]
+transform = Transform3D(0.9388043, 0, 0.34445086, 0, 1, 0, -0.34445086, 0, 0.9388043, -161.47615, 0.99998474, -30.409245)
+
+[node name="Cow47" parent="Cows/FirstCows" unique_id=1080189605 instance=ExtResource("16_8tiyy")]
+transform = Transform3D(0.9388043, 0, 0.34445086, 0, 1, 0, -0.34445086, 0, 0.9388043, -148.2446, 0.99998474, -28.913967)
+
+[node name="Cow48" parent="Cows/FirstCows" unique_id=1389746134 instance=ExtResource("16_8tiyy")]
+transform = Transform3D(0.9388043, 0, 0.34445086, 0, 1, 0, -0.34445086, 0, 0.9388043, -170.18866, 0.9999809, -7.7440453)
+
+[node name="Cow61" parent="Cows/FirstCows" unique_id=581191001 instance=ExtResource("16_8tiyy")]
+transform = Transform3D(0.5974301, 0, -0.801921, 0, 1, 0, 0.801921, 0, 0.5974301, -133.52838, 1, 11.580761)
+
+[node name="Cow62" parent="Cows/FirstCows" unique_id=795154707 instance=ExtResource("16_8tiyy")]
+transform = Transform3D(0.5974301, 0, -0.801921, 0, 1, 0, 0.801921, 0, 0.5974301, -131.1955, 1, 24.690552)
+
+[node name="Cow63" parent="Cows/FirstCows" unique_id=1013947186 instance=ExtResource("16_8tiyy")]
+transform = Transform3D(0.9388043, 0, 0.34445086, 0, 1, 0, -0.34445086, 0, 0.9388043, -125.453026, 0.99998474, 5.6513786)
+
+[node name="Cow49" parent="Cows/FirstCows" unique_id=1699158314 instance=ExtResource("16_8tiyy")]
+transform = Transform3D(0.9388043, 0, 0.34445086, 0, 1, 0, -0.34445086, 0, 0.9388043, -161.58395, 0.9999695, -180.40884)
+
+[node name="Cow50" parent="Cows/FirstCows" unique_id=512445428 instance=ExtResource("16_8tiyy")]
+transform = Transform3D(0.9388043, 0, 0.34445086, 0, 1, 0, -0.34445086, 0, 0.9388043, -124.22182, 0.9999695, -214.31998)
+
+[node name="Cow51" parent="Cows/FirstCows" unique_id=143811785 instance=ExtResource("16_8tiyy")]
+transform = Transform3D(0.9388043, 0, 0.34445086, 0, 1, 0, -0.34445086, 0, 0.9388043, -142.90141, 0.9999695, -196.2135)
+
+[node name="Cow52" parent="Cows/FirstCows" unique_id=1398831039 instance=ExtResource("16_8tiyy")]
+transform = Transform3D(0.9388043, 0, 0.34445086, 0, 1, 0, -0.34445086, 0, 0.9388043, -41.465942, 0.99998474, -207.2908)
+
+[node name="Cow53" parent="Cows/FirstCows" unique_id=394280381 instance=ExtResource("16_8tiyy")]
+transform = Transform3D(0.9388043, 0, 0.34445086, 0, 1, 0, -0.34445086, 0, 0.9388043, -28.234404, 0.99998474, -205.79556)
+
+[node name="Cow54" parent="Cows/FirstCows" unique_id=1002243210 instance=ExtResource("16_8tiyy")]
+transform = Transform3D(0.9388043, 0, 0.34445086, 0, 1, 0, -0.34445086, 0, 0.9388043, -22.783363, 0.99998474, -223.09555)
+
+[node name="Cow55" parent="Cows/FirstCows" unique_id=576856037 instance=ExtResource("16_8tiyy")]
+transform = Transform3D(0.9388043, 0, 0.34445086, 0, 1, 0, -0.34445086, 0, 0.9388043, 132.14406, 0.99998474, -31.957367)
+
+[node name="Cow56" parent="Cows/FirstCows" unique_id=2107611825 instance=ExtResource("16_8tiyy")]
+transform = Transform3D(0.9388043, 0, 0.34445086, 0, 1, 0, -0.34445086, 0, 0.9388043, 145.37563, 0.99998474, -30.462078)
+
+[node name="Cow57" parent="Cows/FirstCows" unique_id=1842908235 instance=ExtResource("16_8tiyy")]
+transform = Transform3D(0.9388043, 0, 0.34445086, 0, 1, 0, -0.34445086, 0, 0.9388043, 150.82663, 0.99998474, -47.762047)
+
+[node name="Cow58" parent="Cows/FirstCows" unique_id=270070371 instance=ExtResource("16_8tiyy")]
+transform = Transform3D(0.9388043, 0, 0.34445086, 0, 1, 0, -0.34445086, 0, 0.9388043, -25.594566, 0.99998474, 42.142517)
+
+[node name="Cow59" parent="Cows/FirstCows" unique_id=268586678 instance=ExtResource("16_8tiyy")]
+transform = Transform3D(0.9388043, 0, 0.34445086, 0, 1, 0, -0.34445086, 0, 0.9388043, -12.363045, 0.99998474, 43.637787)
+
+[node name="Cow60" parent="Cows/FirstCows" unique_id=96988210 instance=ExtResource("16_8tiyy")]
+transform = Transform3D(0.9388043, 0, 0.34445086, 0, 1, 0, -0.34445086, 0, 0.9388043, -6.91201, 0.99998474, 26.33783)
+
+[node name="Cow64" parent="Cows/FirstCows" unique_id=799162368 instance=ExtResource("16_8tiyy")]
+transform = Transform3D(0.9388043, 0, 0.34445086, 0, 1, 0, -0.34445086, 0, 0.9388043, 133.8231, 0.99998474, -160.93942)
+
+[node name="Cow65" parent="Cows/FirstCows" unique_id=2035589977 instance=ExtResource("16_8tiyy")]
+transform = Transform3D(0.9388043, 0, 0.34445086, 0, 1, 0, -0.34445086, 0, 0.9388043, 147.05463, 0.99998474, -159.44415)
+
+[node name="Cow66" parent="Cows/FirstCows" unique_id=1541771941 instance=ExtResource("16_8tiyy")]
+transform = Transform3D(0.9388043, 0, 0.34445086, 0, 1, 0, -0.34445086, 0, 0.9388043, 152.50566, 0.99998474, -176.74411)
+
+[node name="Cow67" parent="Cows/FirstCows" unique_id=975044131 instance=ExtResource("16_8tiyy")]
+transform = Transform3D(0.9388043, 0, 0.34445086, 0, 1, 0, -0.34445086, 0, 0.9388043, 40.98736, 0.99998474, -305.72314)
+
+[node name="Cow68" parent="Cows/FirstCows" unique_id=662395958 instance=ExtResource("16_8tiyy")]
+transform = Transform3D(0.9388043, 0, 0.34445086, 0, 1, 0, -0.34445086, 0, 0.9388043, 54.21888, 0.99998474, -304.22784)
+
+[node name="Cow69" parent="Cows/FirstCows" unique_id=1216284265 instance=ExtResource("16_8tiyy")]
+transform = Transform3D(0.9388043, 0, 0.34445086, 0, 1, 0, -0.34445086, 0, 0.9388043, 59.669914, 0.99998474, -321.52783)
+
+[node name="Cow70" parent="Cows/FirstCows" unique_id=60534989 instance=ExtResource("16_8tiyy")]
+transform = Transform3D(0.9388043, 0, 0.34445086, 0, 1, 0, -0.34445086, 0, 0.9388043, 89.50672, 0.99998474, -254.36075)
+
+[node name="Cow71" parent="Cows/FirstCows" unique_id=1709686 instance=ExtResource("16_8tiyy")]
+transform = Transform3D(0.9388043, 0, 0.34445086, 0, 1, 0, -0.34445086, 0, 0.9388043, 102.73824, 0.99998474, -252.86545)
+
+[node name="Cow72" parent="Cows/FirstCows" unique_id=524096258 instance=ExtResource("16_8tiyy")]
+transform = Transform3D(0.9388043, 0, 0.34445086, 0, 1, 0, -0.34445086, 0, 0.9388043, 108.18928, 0.99998474, -270.16544)
+
+[node name="Cow73" parent="Cows/FirstCows" unique_id=1449304115 instance=ExtResource("16_8tiyy")]
+transform = Transform3D(0.9388043, 0, 0.34445086, 0, 1, 0, -0.34445086, 0, 0.9388043, -123.09827, 0.99998474, -89.62804)
+
+[node name="Cow74" parent="Cows/FirstCows" unique_id=1666261321 instance=ExtResource("16_8tiyy")]
+transform = Transform3D(0.9388043, 0, 0.34445086, 0, 1, 0, -0.34445086, 0, 0.9388043, -109.86673, 0.99998474, -88.13274)
+
+[node name="Cow75" parent="Cows/FirstCows" unique_id=981719740 instance=ExtResource("16_8tiyy")]
+transform = Transform3D(0.9388043, 0, 0.34445086, 0, 1, 0, -0.34445086, 0, 0.9388043, -104.41571, 0.99998474, -105.432724)
+
+[node name="Cow76" parent="Cows/FirstCows" unique_id=1305943552 instance=ExtResource("16_8tiyy")]
+transform = Transform3D(0.9388043, 0, 0.34445086, 0, 1, 0, -0.34445086, 0, 0.9388043, 100.37656, 0.99998474, -66.22912)
+
+[node name="Cow77" parent="Cows/FirstCows" unique_id=1132253167 instance=ExtResource("16_8tiyy")]
+transform = Transform3D(0.9388043, 0, 0.34445086, 0, 1, 0, -0.34445086, 0, 0.9388043, 113.60809, 0.99998474, -64.73382)
+
+[node name="Cow78" parent="Cows/FirstCows" unique_id=1724584212 instance=ExtResource("16_8tiyy")]
+transform = Transform3D(0.9388043, 0, 0.34445086, 0, 1, 0, -0.34445086, 0, 0.9388043, 119.05911, 0.99998474, -82.033806)
+
+[node name="Cow79" parent="Cows/FirstCows" unique_id=25132030 instance=ExtResource("16_8tiyy")]
+transform = Transform3D(0.9388043, 0, 0.34445086, 0, 1, 0, -0.34445086, 0, 0.9388043, -162.51483, 0.99998474, 54.268333)
+
+[node name="Cow80" parent="Cows/FirstCows" unique_id=81956839 instance=ExtResource("16_8tiyy")]
+transform = Transform3D(0.9388043, 0, 0.34445086, 0, 1, 0, -0.34445086, 0, 0.9388043, -149.2833, 0.99998474, 55.763634)
+
+[node name="Cow81" parent="Cows/FirstCows" unique_id=938005653 instance=ExtResource("16_8tiyy")]
+transform = Transform3D(0.9388043, 0, 0.34445086, 0, 1, 0, -0.34445086, 0, 0.9388043, -143.83228, 0.99998474, 38.463646)
+
+[node name="Cow82" parent="Cows/FirstCows" unique_id=1853594625 instance=ExtResource("16_8tiyy")]
+transform = Transform3D(0.9388043, 0, 0.34445086, 0, 1, 0, -0.34445086, 0, 0.9388043, 30.261932, 0.99998474, 97.327965)
+
+[node name="Cow83" parent="Cows/FirstCows" unique_id=1464408888 instance=ExtResource("16_8tiyy")]
+transform = Transform3D(0.9388043, 0, 0.34445086, 0, 1, 0, -0.34445086, 0, 0.9388043, 43.49347, 0.99998474, 98.823265)
+
+[node name="Cow84" parent="Cows/FirstCows" unique_id=1139920072 instance=ExtResource("16_8tiyy")]
+transform = Transform3D(0.9388043, 0, 0.34445086, 0, 1, 0, -0.34445086, 0, 0.9388043, 48.94449, 0.99998474, 81.52328)
+
+[node name="Cow85" parent="Cows/FirstCows" unique_id=1588789555 instance=ExtResource("16_8tiyy")]
+transform = Transform3D(0.9388043, 0, 0.34445086, 0, 1, 0, -0.34445086, 0, 0.9388043, -0.25510406, 0.99998474, 135.27734)
+
+[node name="Cow86" parent="Cows/FirstCows" unique_id=900594421 instance=ExtResource("16_8tiyy")]
+transform = Transform3D(0.9388043, 0, 0.34445086, 0, 1, 0, -0.34445086, 0, 0.9388043, 12.976433, 0.99998474, 136.77264)
+
+[node name="Cow87" parent="Cows/FirstCows" unique_id=145484750 instance=ExtResource("16_8tiyy")]
+transform = Transform3D(0.9388043, 0, 0.34445086, 0, 1, 0, -0.34445086, 0, 0.9388043, 18.427452, 0.99998474, 119.47265)
+
+[node name="Cow88" parent="Cows/FirstCows" unique_id=99764506 instance=ExtResource("16_8tiyy")]
+transform = Transform3D(0.9388043, 0, 0.34445086, 0, 1, 0, -0.34445086, 0, 0.9388043, -97.025444, 0.99998474, 65.68681)
+
+[node name="Cow89" parent="Cows/FirstCows" unique_id=1878332183 instance=ExtResource("16_8tiyy")]
+transform = Transform3D(0.9388043, 0, 0.34445086, 0, 1, 0, -0.34445086, 0, 0.9388043, -83.79391, 0.99998474, 67.18211)
+
+[node name="Cow90" parent="Cows/FirstCows" unique_id=1359367726 instance=ExtResource("16_8tiyy")]
+transform = Transform3D(0.9388043, 0, 0.34445086, 0, 1, 0, -0.34445086, 0, 0.9388043, -78.34289, 0.99998474, 49.88212)
+
+[node name="Cow91" parent="Cows/FirstCows" unique_id=1823202505 instance=ExtResource("16_8tiyy")]
+transform = Transform3D(0.9388043, 0, 0.34445086, 0, 1, 0, -0.34445086, 0, 0.9388043, 156.5333, 0.99998474, -89.39592)
+
+[node name="Cow92" parent="Cows/FirstCows" unique_id=111537717 instance=ExtResource("16_8tiyy")]
+transform = Transform3D(0.9388043, 0, 0.34445086, 0, 1, 0, -0.34445086, 0, 0.9388043, 169.76483, 0.99998474, -87.90062)
+
+[node name="Cow93" parent="Cows/FirstCows" unique_id=406092680 instance=ExtResource("16_8tiyy")]
+transform = Transform3D(0.9388043, 0, 0.34445086, 0, 1, 0, -0.34445086, 0, 0.9388043, 175.21585, 0.99998474, -105.200615)
+
+[node name="Cow94" parent="Cows/FirstCows" unique_id=559077242 instance=ExtResource("16_8tiyy")]
+transform = Transform3D(0.9388043, 0, 0.34445086, 0, 1, 0, -0.34445086, 0, 0.9388043, 24.925415, 0.99998474, -33.444794)
+
+[node name="Cow95" parent="Cows/FirstCows" unique_id=1862750695 instance=ExtResource("16_8tiyy")]
+transform = Transform3D(0.9388043, 0, 0.34445086, 0, 1, 0, -0.34445086, 0, 0.9388043, 38.15695, 0.99998474, -31.949493)
+
+[node name="Cow96" parent="Cows/FirstCows" unique_id=751469308 instance=ExtResource("16_8tiyy")]
+transform = Transform3D(0.9388043, 0, 0.34445086, 0, 1, 0, -0.34445086, 0, 0.9388043, 43.60797, 0.99998474, -49.24949)
+
+[node name="Cow97" parent="Cows/FirstCows" unique_id=1317760328 instance=ExtResource("16_8tiyy")]
+transform = Transform3D(0.9388043, 0, 0.34445086, 0, 1, 0, -0.34445086, 0, 0.9388043, -46.730583, 0.99998474, -29.59256)
+
+[node name="Cow98" parent="Cows/FirstCows" unique_id=1235810445 instance=ExtResource("16_8tiyy")]
+transform = Transform3D(0.9388043, 0, 0.34445086, 0, 1, 0, -0.34445086, 0, 0.9388043, -33.499046, 0.99998474, -28.09726)
+
+[node name="Cow99" parent="Cows/FirstCows" unique_id=490494963 instance=ExtResource("16_8tiyy")]
+transform = Transform3D(0.9388043, 0, 0.34445086, 0, 1, 0, -0.34445086, 0, 0.9388043, -28.048027, 0.99998474, -45.397255)
+
+[node name="Cow100" parent="Cows/FirstCows" unique_id=1251137325 instance=ExtResource("16_8tiyy")]
+transform = Transform3D(0.9388043, 0, 0.34445086, 0, 1, 0, -0.34445086, 0, 0.9388043, 13.251072, 0.9999809, 21.432137)
 
 [node name="Sun" type="DirectionalLight3D" parent="." unique_id=621823940]
 transform = Transform3D(0.743921, -0.37955108, -0.5500206, 0.6403339, 0.64033383, 0.42419934, 0.1911915, -0.6677676, 0.7193971, 0, 6.6657405, 0)
