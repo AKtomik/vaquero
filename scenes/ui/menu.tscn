@@ -14,11 +14,25 @@
 [ext_resource type="Texture2D" uid="uid://ctrgrexyit0ny" path="res://assets/UI/quit_idle.png" id="9_tub5d"]
 [ext_resource type="Texture2D" uid="uid://d0mcj7p5xsvt8" path="res://assets/UI/quit_hover.png" id="10_dnmb1"]
 [ext_resource type="Texture2D" uid="uid://cmq3bjysrh0fw" path="res://assets/UI/logo.png" id="12_dnmb1"]
+[ext_resource type="FontFile" uid="uid://ph7cqyrd6bix" path="res://assets/UI/fonts/Niagara Solid.TTF" id="13_ir0oc"]
 
-[node name="Menu" type="Node2D" unique_id=1061989209 node_paths=PackedStringArray("credits_layer", "mute_button")]
+[sub_resource type="LabelSettings" id="LabelSettings_a7ikg"]
+font = ExtResource("13_ir0oc")
+font_size = 40
+font_color = Color(0.6862745, 0.20392157, 0.19215687, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_i340n"]
+font = ExtResource("13_ir0oc")
+font_size = 60
+font_color = Color(0.6862745, 0.20392157, 0.19215687, 1)
+
+[node name="Menu" type="Node2D" unique_id=1061989209 node_paths=PackedStringArray("credits_layer", "mute_button", "best_category", "best_tag_play", "best_tag_challenge")]
 script = ExtResource("1_yqeox")
 credits_layer = NodePath("CanvasLayer2")
 mute_button = NodePath("CanvasLayer/Mute")
+best_category = NodePath("BestGroup")
+best_tag_play = NodePath("BestGroup/BestPlay")
+best_tag_challenge = NodePath("BestGroup/BestChallenge")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1325743933]
 offset_right = 1410.0
@@ -95,6 +109,68 @@ offset_bottom = 217.0
 scale = Vector2(0.4, 0.4)
 texture_normal = ExtResource("9_tub5d")
 texture_hover = ExtResource("10_dnmb1")
+
+[node name="BestGroup" type="Control" parent="." unique_id=90763817]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="BestTag" type="Label" parent="BestGroup" unique_id=1679491902]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 61.0
+offset_top = 519.0
+offset_right = 297.0
+offset_bottom = 608.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+text = "Meilleurs
+scores"
+label_settings = SubResource("LabelSettings_a7ikg")
+horizontal_alignment = 1
+
+[node name="BestPlay" type="Label" parent="BestGroup" unique_id=216265995]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 295.0
+offset_top = 534.0
+offset_right = 509.0
+offset_bottom = 599.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+text = "Campagne: 123"
+label_settings = SubResource("LabelSettings_i340n")
+
+[node name="BestChallenge" type="Label" parent="BestGroup" unique_id=125356304]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 582.0
+offset_top = 534.0
+offset_right = 790.0
+offset_bottom = 599.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+text = "Defis: 123"
+label_settings = SubResource("LabelSettings_i340n")
 
 [node name="CanvasLayer2" type="CanvasLayer" parent="." unique_id=1783456785]
 visible = false

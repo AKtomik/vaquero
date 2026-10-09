@@ -8,6 +8,10 @@ extends Node2D
 @export var sound_off_idle = preload("res://assets/UI/sound off_idle.png")
 @export var sound_off_hover = preload("res://assets/UI/sound off_hover.png")
 
+@export var best_category: Control
+@export var best_tag_play: Label
+@export var best_tag_challenge: Label
+
 var sound_on: bool = true
 
 # Called when the node enters the scene tree for the first time.
@@ -19,10 +23,14 @@ func _ready() -> void:
 		print("challenge aviable")
 		$CanvasLayer/Challenge.disabled = false
 		$CanvasLayer/Challenge.visible = true
+		best_category.visible = true
+		best_tag_play.text = "Campagne: "+str(GameOverlord.high_score_campaign)
+		best_tag_challenge.text = "Défis: "+str(GameOverlord.high_score_challenge)
 	else:
 		print("no challenge")
 		$CanvasLayer/Challenge.disabled = true
 		$CanvasLayer/Challenge.visible = false
+		best_category.visible = false
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

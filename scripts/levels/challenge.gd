@@ -4,6 +4,8 @@ extends Level
 @onready var scene_challenge: PackedScene = preload("res://scenes/levels/challenge.tscn")
 @export var do_end_to_menu = false
 
+#@export var respawn_points = Array[Node3D]
+
 func level_end():
 	print("challenge end! score: ", score_current, " (fake goal", score_goal,")")
 	var last_best : int = GameOverlord.high_score_challenge
@@ -25,7 +27,7 @@ func level_end():
 
 func _on_end_delay_timeout():
 	$CanvasLayer/ChallengeScore.visible = false
-	if (do_end_to_menu): GameOverlord.end_game()
+	if (do_end_to_menu): GameOverlord.end_challenge()
 
 func _on_quit_button_pressed() -> void:
-	GameOverlord.end_game()
+	GameOverlord.end_challenge()

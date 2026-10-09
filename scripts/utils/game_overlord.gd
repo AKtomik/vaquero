@@ -16,7 +16,7 @@ var loyauty: int = 0
 var last_level: int = 0
 var last_score: int = 0
 var total_score: int = 0# todo: use it
-var high_score: int = 0# todo: use it
+var high_score_campaign: int = 0# todo: use it
 var last_score_challenge: int = 0
 var high_score_challenge: int = 0# todo: use it
 
