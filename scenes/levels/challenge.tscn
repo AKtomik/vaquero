@@ -220,6 +220,186 @@ transform = Transform3D(1.7014254, 0, -2.4054759, 0, 1.5555632, 0, 1.5721723, 0,
 [node name="KayouTall3" parent="Map/Obstacles/Wave2" unique_id=1825760967 instance=ExtResource("15_usj52")]
 transform = Transform3D(0.4180309, 0, 0.90843284, 0, 1, 0, -0.90843284, 0, 0.4180309, -59.49492, 0, -65.73389)
 
+[node name="Wave3" type="Node3D" parent="Map/Obstacles" unique_id=816452207]
+transform = Transform3D(0.1856978, 0, 0.9826069, 0, 1, 0, -0.9826069, 0, 0.1856978, -8.203815, 3.0517578e-05, 71.8009)
+
+[node name="Cactus" parent="Map/Obstacles/Wave3" unique_id=743172304 instance=ExtResource("14_kf2f6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.710398, -1.9073486e-06, -2.0625162)
+
+[node name="Cactus7" parent="Map/Obstacles/Wave3" unique_id=719502977 instance=ExtResource("14_kf2f6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -75.75689, -1.9073486e-06, -45.79735)
+
+[node name="Cactus6" parent="Map/Obstacles/Wave3" unique_id=1669062378 instance=ExtResource("14_kf2f6")]
+transform = Transform3D(0.66758525, 0, 0.74453336, 0, 1, 0, -0.74453336, 0, 0.66758525, -10.474557, -1.9073486e-06, -45.362366)
+
+[node name="Cactus2" parent="Map/Obstacles/Wave3" unique_id=529735468 instance=ExtResource("14_kf2f6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 58.349533, -1.9073486e-06, -81.28586)
+
+[node name="Cactus3" parent="Map/Obstacles/Wave3" unique_id=1145775675 instance=ExtResource("14_kf2f6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 51.456074, -1.9073486e-06, -96.85123)
+
+[node name="Cactus4" parent="Map/Obstacles/Wave3" unique_id=1507142363 instance=ExtResource("14_kf2f6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 73.86173, -1.9073486e-06, -134.93782)
+
+[node name="Cactus5" parent="Map/Obstacles/Wave3" unique_id=1661546230 instance=ExtResource("14_kf2f6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45.32179, -5.722046e-06, -146.46024)
+
+[node name="KayouTall" parent="Map/Obstacles/Wave3" unique_id=1675007861 instance=ExtResource("15_usj52")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38.726707, 0, -13.238326)
+
+[node name="KayouTall2" parent="Map/Obstacles/Wave3" unique_id=767502718 instance=ExtResource("15_usj52")]
+transform = Transform3D(1.2466758, 0, -1.3542774, 0, 1.5555632, 0, 1.151969, 0, 1.4656167, 29.98803, -0.14998817, -58.39211)
+
+[node name="KayouTall4" parent="Map/Obstacles/Wave3" unique_id=1827631178 instance=ExtResource("15_usj52")]
+transform = Transform3D(1.7014254, 0, -2.4054759, 0, 1.5555632, 0, 1.5721723, 0, 2.6032376, 35.065563, -0.14998817, -161.96605)
+
+[node name="KayouTall3" parent="Map/Obstacles/Wave3" unique_id=1812414371 instance=ExtResource("15_usj52")]
+transform = Transform3D(0.4180309, 0, 0.90843284, 0, 1, 0, -0.90843284, 0, 0.4180309, -59.49492, 0, -65.73389)
+
+[node name="Wave4" type="Node3D" parent="Map/Obstacles" unique_id=378306694]
+transform = Transform3D(-0.998647, 0, -0.052003235, 0, 1, 0, 0.052003235, 0, -0.998647, 92.20529, 3.0517578e-05, -51.556427)
+
+[node name="Cactus" parent="Map/Obstacles/Wave4" unique_id=446319501 instance=ExtResource("14_kf2f6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.710398, -1.9073486e-06, -2.0625162)
+
+[node name="Cactus7" parent="Map/Obstacles/Wave4" unique_id=1085868957 instance=ExtResource("14_kf2f6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -75.75689, -1.9073486e-06, -45.79735)
+
+[node name="Cactus6" parent="Map/Obstacles/Wave4" unique_id=50633451 instance=ExtResource("14_kf2f6")]
+transform = Transform3D(0.66758525, 0, 0.74453336, 0, 1, 0, -0.74453336, 0, 0.66758525, -10.474557, -1.9073486e-06, -45.362366)
+
+[node name="Cactus2" parent="Map/Obstacles/Wave4" unique_id=120655589 instance=ExtResource("14_kf2f6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 58.349533, -1.9073486e-06, -81.28586)
+
+[node name="Cactus3" parent="Map/Obstacles/Wave4" unique_id=1998543405 instance=ExtResource("14_kf2f6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 51.456074, -1.9073486e-06, -96.85123)
+
+[node name="Cactus4" parent="Map/Obstacles/Wave4" unique_id=74580431 instance=ExtResource("14_kf2f6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 73.86173, -1.9073486e-06, -134.93782)
+
+[node name="Cactus5" parent="Map/Obstacles/Wave4" unique_id=876382679 instance=ExtResource("14_kf2f6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45.32179, -5.722046e-06, -146.46024)
+
+[node name="KayouTall" parent="Map/Obstacles/Wave4" unique_id=396157912 instance=ExtResource("15_usj52")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38.726707, 0, -13.238326)
+
+[node name="KayouTall2" parent="Map/Obstacles/Wave4" unique_id=386945244 instance=ExtResource("15_usj52")]
+transform = Transform3D(1.2466758, 0, -1.3542774, 0, 1.5555632, 0, 1.151969, 0, 1.4656167, 29.98803, -0.14998817, -58.39211)
+
+[node name="KayouTall4" parent="Map/Obstacles/Wave4" unique_id=955401863 instance=ExtResource("15_usj52")]
+transform = Transform3D(1.7014254, 0, -2.4054759, 0, 1.5555632, 0, 1.5721723, 0, 2.6032376, 35.065563, -0.14998817, -161.96605)
+
+[node name="KayouTall3" parent="Map/Obstacles/Wave4" unique_id=1722064475 instance=ExtResource("15_usj52")]
+transform = Transform3D(0.4180309, 0, 0.90843284, 0, 1, 0, -0.90843284, 0, 0.4180309, -59.49492, 0, -65.73389)
+
+[node name="Wave5" type="Node3D" parent="Map/Obstacles" unique_id=1437838942]
+transform = Transform3D(-0.36662576, 0, -0.93036854, 0, 1, 0, 0.93036854, 0, -0.36662576, 44.1755, 2.2888184e-05, -297.61545)
+
+[node name="Cactus" parent="Map/Obstacles/Wave5" unique_id=1239527457 instance=ExtResource("14_kf2f6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.710398, -1.9073486e-06, -2.0625162)
+
+[node name="Cactus7" parent="Map/Obstacles/Wave5" unique_id=516146848 instance=ExtResource("14_kf2f6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -75.75689, -1.9073486e-06, -45.79735)
+
+[node name="Cactus6" parent="Map/Obstacles/Wave5" unique_id=1062221800 instance=ExtResource("14_kf2f6")]
+transform = Transform3D(0.66758525, 0, 0.74453336, 0, 1, 0, -0.74453336, 0, 0.66758525, -10.474557, -1.9073486e-06, -45.362366)
+
+[node name="Cactus2" parent="Map/Obstacles/Wave5" unique_id=1102137762 instance=ExtResource("14_kf2f6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 58.349533, -1.9073486e-06, -81.28586)
+
+[node name="Cactus3" parent="Map/Obstacles/Wave5" unique_id=1010486721 instance=ExtResource("14_kf2f6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 51.456074, -1.9073486e-06, -96.85123)
+
+[node name="Cactus4" parent="Map/Obstacles/Wave5" unique_id=1003886922 instance=ExtResource("14_kf2f6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 73.86173, -1.9073486e-06, -134.93782)
+
+[node name="Cactus5" parent="Map/Obstacles/Wave5" unique_id=2103382502 instance=ExtResource("14_kf2f6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45.32179, -5.722046e-06, -146.46024)
+
+[node name="KayouTall" parent="Map/Obstacles/Wave5" unique_id=1432779842 instance=ExtResource("15_usj52")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38.726707, 0, -13.238326)
+
+[node name="KayouTall2" parent="Map/Obstacles/Wave5" unique_id=1233677728 instance=ExtResource("15_usj52")]
+transform = Transform3D(1.2466758, 0, -1.3542774, 0, 1.5555632, 0, 1.151969, 0, 1.4656167, 29.98803, -0.14998817, -58.39211)
+
+[node name="KayouTall4" parent="Map/Obstacles/Wave5" unique_id=516526013 instance=ExtResource("15_usj52")]
+transform = Transform3D(1.7014254, 0, -2.4054759, 0, 1.5555632, 0, 1.5721723, 0, 2.6032376, 35.065563, -0.14998817, -161.96605)
+
+[node name="KayouTall3" parent="Map/Obstacles/Wave5" unique_id=1816793275 instance=ExtResource("15_usj52")]
+transform = Transform3D(0.4180309, 0, 0.90843284, 0, 1, 0, -0.90843284, 0, 0.4180309, -59.49492, 0, -65.73389)
+
+[node name="Wave6" type="Node3D" parent="Map/Obstacles" unique_id=1469415353]
+transform = Transform3D(-0.85754144, 0, 0.5144149, 0, 1, 0, -0.5144149, 0, -0.85754144, 191.07816, 3.8146973e-05, -179.34158)
+
+[node name="Cactus" parent="Map/Obstacles/Wave6" unique_id=992056828 instance=ExtResource("14_kf2f6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.710398, -1.9073486e-06, -2.0625162)
+
+[node name="Cactus7" parent="Map/Obstacles/Wave6" unique_id=1110067938 instance=ExtResource("14_kf2f6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -75.75689, -1.9073486e-06, -45.79735)
+
+[node name="Cactus6" parent="Map/Obstacles/Wave6" unique_id=1579581903 instance=ExtResource("14_kf2f6")]
+transform = Transform3D(0.66758525, 0, 0.74453336, 0, 1, 0, -0.74453336, 0, 0.66758525, -10.474557, -1.9073486e-06, -45.362366)
+
+[node name="Cactus2" parent="Map/Obstacles/Wave6" unique_id=1476142021 instance=ExtResource("14_kf2f6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 58.349533, -1.9073486e-06, -81.28586)
+
+[node name="Cactus3" parent="Map/Obstacles/Wave6" unique_id=1466302932 instance=ExtResource("14_kf2f6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 51.456074, -1.9073486e-06, -96.85123)
+
+[node name="Cactus4" parent="Map/Obstacles/Wave6" unique_id=2135674125 instance=ExtResource("14_kf2f6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 73.86173, -1.9073486e-06, -134.93782)
+
+[node name="Cactus5" parent="Map/Obstacles/Wave6" unique_id=337837310 instance=ExtResource("14_kf2f6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45.32179, -5.722046e-06, -146.46024)
+
+[node name="KayouTall" parent="Map/Obstacles/Wave6" unique_id=1599907585 instance=ExtResource("15_usj52")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38.726707, 0, -13.238326)
+
+[node name="KayouTall2" parent="Map/Obstacles/Wave6" unique_id=2142819965 instance=ExtResource("15_usj52")]
+transform = Transform3D(1.2466758, 0, -1.3542774, 0, 1.5555632, 0, 1.151969, 0, 1.4656167, 29.98803, -0.14998817, -58.39211)
+
+[node name="KayouTall4" parent="Map/Obstacles/Wave6" unique_id=1241316349 instance=ExtResource("15_usj52")]
+transform = Transform3D(1.7014254, 0, -2.4054759, 0, 1.5555632, 0, 1.5721723, 0, 2.6032376, 35.065563, -0.14998817, -161.96605)
+
+[node name="KayouTall3" parent="Map/Obstacles/Wave6" unique_id=1310972785 instance=ExtResource("15_usj52")]
+transform = Transform3D(0.4180309, 0, 0.90843284, 0, 1, 0, -0.90843284, 0, 0.4180309, -59.49492, 0, -65.73389)
+
+[node name="Wave7" type="Node3D" parent="Map/Obstacles" unique_id=1083434491]
+transform = Transform3D(0.9621897, 0, -0.2723803, 0, 1, 0, 0.2723803, 0, 0.9621897, -170.73181, 3.8146973e-05, -12.412186)
+
+[node name="Cactus" parent="Map/Obstacles/Wave7" unique_id=2071191171 instance=ExtResource("14_kf2f6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.710398, -1.9073486e-06, -2.0625162)
+
+[node name="Cactus7" parent="Map/Obstacles/Wave7" unique_id=1052071693 instance=ExtResource("14_kf2f6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -75.75689, -1.9073486e-06, -45.79735)
+
+[node name="Cactus6" parent="Map/Obstacles/Wave7" unique_id=1245853641 instance=ExtResource("14_kf2f6")]
+transform = Transform3D(0.66758525, 0, 0.74453336, 0, 1, 0, -0.74453336, 0, 0.66758525, -10.474557, -1.9073486e-06, -45.362366)
+
+[node name="Cactus2" parent="Map/Obstacles/Wave7" unique_id=315249690 instance=ExtResource("14_kf2f6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 58.349533, -1.9073486e-06, -81.28586)
+
+[node name="Cactus3" parent="Map/Obstacles/Wave7" unique_id=507371911 instance=ExtResource("14_kf2f6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 51.456074, -1.9073486e-06, -96.85123)
+
+[node name="Cactus4" parent="Map/Obstacles/Wave7" unique_id=382598497 instance=ExtResource("14_kf2f6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 73.86173, -1.9073486e-06, -134.93782)
+
+[node name="Cactus5" parent="Map/Obstacles/Wave7" unique_id=1272440403 instance=ExtResource("14_kf2f6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45.32179, -5.722046e-06, -146.46024)
+
+[node name="KayouTall" parent="Map/Obstacles/Wave7" unique_id=443942659 instance=ExtResource("15_usj52")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38.726707, 0, -13.238326)
+
+[node name="KayouTall2" parent="Map/Obstacles/Wave7" unique_id=1828716051 instance=ExtResource("15_usj52")]
+transform = Transform3D(1.2466758, 0, -1.3542774, 0, 1.5555632, 0, 1.151969, 0, 1.4656167, 29.98803, -0.14998817, -58.39211)
+
+[node name="KayouTall4" parent="Map/Obstacles/Wave7" unique_id=736802773 instance=ExtResource("15_usj52")]
+transform = Transform3D(1.7014254, 0, -2.4054759, 0, 1.5555632, 0, 1.5721723, 0, 2.6032376, 35.065563, -0.14998817, -161.96605)
+
+[node name="KayouTall3" parent="Map/Obstacles/Wave7" unique_id=511084848 instance=ExtResource("15_usj52")]
+transform = Transform3D(0.4180309, 0, 0.90843284, 0, 1, 0, -0.90843284, 0, 0.4180309, -59.49492, 0, -65.73389)
+
 [node name="Cows" type="Node3D" parent="." unique_id=1804944878]
 
 [node name="FirstCows" type="Node3D" parent="Cows" unique_id=784663719]
