@@ -23,7 +23,8 @@
 [node name="LevelRoot" type="Node3D" unique_id=1058585129 node_paths=PackedStringArray("sun_node", "pen_node", "ui_node")]
 script = ExtResource("1_vyech")
 duration_seconds = 120.0
-score_goal = 30
+score_goal = -1
+do_good_score_end = false
 sun_node = NodePath("Sun")
 pen_node = NodePath("Map/FencesCircle/Pen")
 ui_node = NodePath("CanvasLayer/UI")

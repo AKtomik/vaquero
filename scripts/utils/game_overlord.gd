@@ -17,6 +17,8 @@ var last_level: int = 0
 var last_score: int = 0
 var total_score: int = 0# todo: use it
 var high_score: int = 0# todo: use it
+var last_score_challenge: int = 0
+var high_score_challenge: int = 0# todo: use it
 
 # scenes
 func start_game() -> void:
@@ -32,10 +34,15 @@ func end_game() -> void:
 	game_finished_once = true
 		
 	get_tree().change_scene_to_packed(menu_scene)
+
+func end_challenge() -> void:
+	print("manager end challenge to menu")
+	last_score_challenge = last_score
+	if (last_score_challenge > high_score_challenge): high_score_challenge = last_score_challenge
+	get_tree().change_scene_to_packed(menu_scene)
 	
 	
 func start_challenge() -> void:
-	
 	switch_to_level(0)
 	
 	
