@@ -1,0 +1,3 @@
+Hum, tu peux mieux faire j'en suis certain
+do GameOverlord.switch_to_level(0)
+return

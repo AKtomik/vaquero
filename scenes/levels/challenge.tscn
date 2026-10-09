@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://tug6imkudnb0"]
 
 [ext_resource type="Script" uid="uid://dqk0eecdug4p4" path="res://scripts/levels/challenge.gd" id="1_vyech"]
+[ext_resource type="Resource" uid="uid://civi3y2ptyg5h" path="res://assets/Narrative/challenge_good.dtl" id="2_i340n"]
+[ext_resource type="Resource" uid="uid://db1qnusoq2b7x" path="res://assets/Narrative/challenge_retry.dtl" id="3_jemr8"]
 [ext_resource type="PackedScene" uid="uid://dsaf48h56ubr" path="res://scenes/level_elements/common_level.tscn" id="6_axp3e"]
 [ext_resource type="PackedScene" uid="uid://75wf2fkcgd2q" path="res://scenes/entities/player.tscn" id="7_0af4i"]
 [ext_resource type="PackedScene" uid="uid://dbynw7w7qasvq" path="res://scenes/level_elements/camera_things.tscn" id="8_4c581"]
@@ -25,6 +27,8 @@ score_goal = 30
 sun_node = NodePath("Sun")
 pen_node = NodePath("Map/FencesCircle/Pen")
 ui_node = NodePath("CanvasLayer/UI")
+dialog_success = ExtResource("2_i340n")
+dialog_failure = ExtResource("3_jemr8")
 
 [node name="CommonLevel" parent="." unique_id=96974107 instance=ExtResource("6_axp3e")]
 
@@ -33,7 +37,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7994308, 0)
 
 [node name="CameraThings" parent="." unique_id=774152112 instance=ExtResource("8_4c581")]
 
-[node name="FollowCamera" parent="CameraThings" index="0" unique_id=2081140864 node_paths=PackedStringArray("level", "follow_node")]
+[node name="Camera" parent="CameraThings" index="0" unique_id=2081140864 node_paths=PackedStringArray("level", "follow_node")]
 level = NodePath("../..")
 follow_node = NodePath("../../Player")
 
