@@ -38,6 +38,8 @@ dialog_failure = ExtResource("3_jemr8")
 
 [node name="Player" parent="." unique_id=421952062 node_paths=PackedStringArray("level") instance=ExtResource("7_0af4i")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7994308, 0)
+SPEED_MAX = 20.0
+SPEED_ACCELERATION = 0.7
 level = NodePath("..")
 
 [node name="CameraThings" parent="." unique_id=774152112 instance=ExtResource("8_4c581")]
