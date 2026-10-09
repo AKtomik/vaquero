@@ -29,6 +29,15 @@ func _ready() -> void:
 func _process(_delta: float) -> void:
 	pass
 
+var d_count = 0
+func _unhandled_input(event):
+	if event is InputEventKey:
+		if event.pressed and event.keycode == KEY_D:
+			d_count += 1
+			if (d_count >= 3):
+				GameOverlord.game_finished_once = !GameOverlord.game_finished_once
+				get_tree().reload_current_scene()
+
 func _on_start_pressed() -> void:
 	
 	play_button_sound()
