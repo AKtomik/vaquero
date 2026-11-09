@@ -73,10 +73,10 @@ func game_over(id: int) -> void:
 			game_over_text = "Mort par la main de ton père."
 		1:
 			# interlude between lvl 1 and lvl 2 
-			game_over_text = "Mort tué par Juanico."
+			game_over_text = "Mort poignardé par Juanico."
 		2:
 			# interlude between lvl 2 and lvl 3
-			game_over_text = "Mort par les balles d'un Espagnol."
+			game_over_text = "Mort abattu d’un tir d’arquebuse."
 		3:
 			# interlude between lvl 3 and lvl 4
 			game_over_text = "Mort empoisonné par ta femme."
