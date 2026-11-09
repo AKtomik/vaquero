@@ -1,15 +1,22 @@
 join melchor_old center
 if {loyalty} >= 3.0:
-	San Luis Potosí, 1600. Tu as 65 ans. Tu marches avec un de tes fils, qui a décidé de suivre tes pas et de s’engager dans une vie de vacher. Tu lui expliques qu’il ne doit jamais oublier la mémoire de son grand-père, un des premiers Espagnols à peupler la Nouvelle-Espagne.
-	melchor_old: Rappelle-toi de l’histoire de Marcos Ramos. Un très bon vacher, un homme courageux, mais son orgueil l’a perdu. Il a défié l’Espagnol qui l’avait engagé et il a fini exécuté comme un chien devant sa femme.
-	Ce souvenir ravive un goût amer que tu ne ressentais pas depuis des années. Tu as besoin de te reposer. Ton fils t’aide à t’asseoir à l’ombre d’un mezquite pour faire la sieste. Tu ne te réveilleras pas.
+	San Luis Potosí, 1600. Tu as 65 ans. Tu marches avec un de tes fils, qui a décidé de suivre tes pas et s’engager dans une vie de vacher. Tu lui répètes encore une fois qu’il ne doit jamais oublier la mémoire de son grand-père, un des premiers Espagnols venus peupler la Nouvelle-Espagne.
+	melchor_old: Souviens-toi de Marcos Ramos. C’était un très bon vacher, un homme courageux, mais son orgueil l’a perdu. Il a défié son patron et il a fini exécuté comme un chien devant sa femme.
+	Ce souvenir ravive un goût amer que tu n’avais pas ressenti depuis des années. Tu as besoin de te reposer. Avec l'aide de ton fils, tu t'assoies à l’ombre d’un mezquite.
+	Tu lui dis que tu as besoin d’une sieste...
+	 Tu ne te réveilleras pas.
 elif {loyalty} >= 1.0:
-	San Luis Potosí, 1600. Tu as 65 ans. Tu marches avec un de tes fils, qui a décidé de suivre tes pas et de s’engager dans une vie de vacher. Tu lui confies certains secrets que tu n’as partagé avec personne. Tu lui montres la figure déteinte de Mantelillos sur ce bras que tu as toujours un peu caché, de peur d’être dénoncé à l’Inquisition...
-	melchor_old: Les Espagnols sont superstitieux et pensent que les vachers nous vendons notre âme au diable.
-	Cela fait à peine un quart d’heure que vous marchez, mais tu sens que tu as besoin de te reposer. Ton fils t’aide à t’asseoir à l’ombre d’un mezquite pour faire la sieste. Tu ne te réveilleras pas.
+	San Luis Potosí, 1600. Tu as 65 ans. Tu marches avec un de tes fils, qui a décidé de devenir vacher. Tu lui confies des secrets que tu n’as partagé avec personne. Tu lui montres la figure déteinte de Mantelillos sur ce bras que tu as toujours un peu caché, de peur d’être dénoncé à l’Inquisition...
+	melchor_old: Les Espagnols sont de grands superstitieux. Ils pensent que nous, les vachers, on a vendu notre âme au diable.
+	Cela fait à peine un quart d’heure que vous marchez, mais tu sens que tu as besoin de te reposer.
+	Ton fils t’aide à t’asseoir à l’ombre d’un mezquite pour faire une sieste...
+	 Tu ne te réveilleras pas.
 else:
-	San Luis Potosí, 1600. Tu as 65 ans. Tu marches avec un de tes fils, qui a décidé de suivre tes pas et de s’engager dans une vie de vacher. Tu l’emmènes à l’ombre d’un mezquite, à l’abri des regards. Tu attends que ton fils allume un feu de camp pour lui parler.
+	 Tu as 65 ans. Tu marches avec un de tes fils, qui a décidé de devenir vacher. Tu l’emmènes à l’ombre d’un mezquite, à l’abri des regards. Tu attends que ton fils allume un feu de camp, comme pour cuire un bout de viande \:
 	melchor_old: Je respecte ta décision, mais je dois te remettre quelque chose avant de te laisser partir. Bois une bonne gorgée de vin et donne-moi ton bras.
-	Tu chauffes ton couteau et tu sors une fiole d’encre. Par intervalles réguliers, tu vérifies que chaque trait tracé correspond à ceux que tu portes sur ton propre avant-bras. Mantelillos t’a protégé de la mort, tu sais qu’il en fera autant pour ton fils. Une fois terminé, tu demandes à ton fils de partir se laver le bras dans la rivière pendant que tu fais la sieste. Tu ne te réveilleras pas.
+	Pendant que tu chauffes ton couteau, tu sors une fiole d’encre de ta poche... Tu commences à tatouer ton fils.
+	Par intervalles réguliers, tu vérifies que chaque trait tracé correspond à ceux que tu portes sur ton propre avant-bras. Mantelillos t’a sauvé des flèches, des cornes et des canifs.
+	Une fois terminé, tu ordonnes à ton fils de partir se laver le bras dans la rivière pendant que tu fais la sieste...
+	Tu ne te réveilleras pas.
 do GameOverlord.end_game()
 return

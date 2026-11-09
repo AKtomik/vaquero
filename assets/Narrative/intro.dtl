@@ -3,16 +3,17 @@ set {loyalty} = 0
 Ixmiquilpan, 1551. Tu attends ton père à l’ombre de l’immense monastère érigé à la place de l’église en bois et en paille où tu as été baptisé seize ans auparavant. A la sortie de la messe, tu aperçois ton père qui te fait signe d’approcher.
 join pere center
 join melchor center
-pere: Melchor, tu es un homme fait. Je t’ai appris à monter à cheval et à signer avec une plume. Tu n’as pas besoin de plus pour gagner ta vie dans ce pays. Prends la route pour San Juan del Río, tu remettras cette lettre au conquistador Bocanegra. J’ai fait sa connaissance dans le vaisseau qui nous a emmenés d’Espagne jusqu’ici. Depuis, il a prouvé sa valeur en faisant la guerre dans le pays des Chichimèques, les plus barbares des Indiens.
+pere: Melchor, tu es un homme fait. Je t’ai appris à monter à cheval et à signer avec une plume. Tu n’as pas besoin de plus pour gagner ta vie dans ce pays. Pars à San Juan del Río, tu remettras cette lettre au conquistador Bocanegra. J’ai fait sa connaissance dans le vaisseau qui nous a emmenés d’Espagne jusqu’ici. Depuis, il a prouvé sa valeur en combattant dans le pays des Chichimèques, les plus barbares des Indiens.
 - Jamais ! Un Chichimèque peut tuer d’une seule flèche un cheval et son cavalier.
-	pere: C’est vrai, mais ces infidèles n’en ont plus pour longtemps. Les Otomis vont nous aider à les soumettre. Et le vice-roi distribue d’immenses terres à tous les Espagnols qui veulent élever des vaches et des chevaux. Travaille pour l’un d’entre eux et tu jouiras de sa protection et de sa richesse.
+	pere: C’est vrai, mais ces infidèles n’en ont plus pour longtemps. Les Otomis vont nous aider à les soumettre. Et le vice-roi offre d’immenses terres aux Espagnols qui veulent élever des vaches et des chevaux. Travaille pour le premier qui accepte de te payer 15 piastres à l’année.
 - Très bien. J’espère ne plus jamais revoir ton visage, perro, puto, bellaco.
-	pere: Mulâtre ingrat, tu ne vaux pas mieux que les Indiens qui prient à la Vierge le jour et font des sacrifices à Quetzalcoatl la nuit, serviteur de Satan \: je vais t’envoyer aux mines de Ixmiquilpan expurger tes pêchés à la sueur de ton front.
+	pere: Maudit Mulâtre, tu ne vaux pas mieux que les Indiens qui prient à la Vierge le jour et font des sacrifices à Quetzalcoatl la nuit, esclave de Satan \: tu vas expier tes péchés à la sueur de ton front au fond d’une mine.
 	do GameOverlord.game_over(0)
 	return
-- Oui, mon seigneur. Si l’on me demande qui sont mes parents, que dois-je dire ?
-	pere: N’utilise jamais le nom de ma famille. Tu n’es pas un enfant de Castille et tu ne tromperas jamais personne. Ta mère était de Guinée, ne dissimule pas que tu es le fils d’une esclave, ta peau te trahira toujours.
+- Oui, mon seigneur. Si on me demande qui sont mes parents, je dis quoi ?
+	pere: N’utilise jamais le nom de ma famille. Tu n’es pas un enfant de Castille, ta mère était de Guinée. Et ta peau parle pour toi \: même libre tu ne seras jamais que le fils d’une esclave.
 	do GameOverlord.add_loyauty(1)
-Trois jours plus tard, tu arrives dans le domaine de Bocanegra. Le conquistador a accepté de te nourrir sous son toit le temps que tu apprennes les rudiments du métier auprès de ses esclaves. Après quelques semaines, l’heure de vérité arrive \: un troupeau de cinq cents vaches vient d’arriver dans la vallée de San Juan et doit être amené à quelques lieues à l’intérieur du pays des Chichimèques.
+Trois jours plus tard, tu arrives dans le domaine de Bocanegra. Le conquistador a accepté de te nourrir sous son toit le temps que tu apprennes les rudiments du métier auprès de ses esclaves.
+Après quelques semaines, l’heure de vérité arrive \: un troupeau de cinq cents vaches vient d’arriver dans la vallée de San Juan. Tu es engagé pour l’amener trois lieues à l’intérieur du pays des Chichimèques.
 do GameOverlord.switch_to_level(1)
 return

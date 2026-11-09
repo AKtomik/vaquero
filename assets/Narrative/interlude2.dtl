@@ -1,19 +1,19 @@
 do MusicPlayer.play_music_narration("interlude2")
-León, 1576. Tu as 41 ans. Les pluies tardent, l’herbe reste sèche et les vautours dévorent les cadavres de vaches. Mais la guerre est pire que la sécheresse \: deux franciscains ont été assassinés et les Chichimèques montent désormais à cheval avec l’équipement volé aux vachers.
+León, 1576. Tu as 41 ans. Les pluies tardent à tomber, l’herbe est sèche et les vautours planent dans le ciel. Dieu semble avoir abandonné les Espagnols. Une terrible épidémie s’est abattue sur la Nouvelle-Espagne. Les Chichimèques sont devenus des cavaliers redoutables. La mort est à tes trousses.
 join melchor_mid center
 join diego center
-Dieu semble avoir abandonné la Nouvelle-Espagne, frappée par une terrible épidémie. Résigné, tu bois de l’alcool de maguey avec un ami indien, ancien compagnon de Jilotepec, qui a lui aussi choisi la liberté et les dangers de la vie de vacher. Vos échanges en espagnol mêlé d’otomi ravivent avec amertume les souvenirs de ton enfance.
-diego: J’entends de plus en plus d’Espagnols se plaindre des esclaves qui s’enfuient. Paraît qu’ils volent des vaches pour les revendre. Ils demandent même des terres eux aussi. Cela donne une mauvaise réputation aux vachers, surtout aux Noirs et aux Mulâtres. J’en ai entendu certains dire que vous étiez pires que des Chichimèques parce que vous étiez plus malins et plus menteurs.
+Désabusé, tu bois de l’alcool de maguey avec un vieil Otomi, qui a lui aussi choisi la liberté et les dangers de la vie de vacher. Son accent ravive avec amertume les souvenirs de ton enfance.
+diego: Fais attention, Melchor \: j'entends les Espagnols parler des esclaves qui les désobéissent et s'enfuient dans le désert voler du bétail. Ça fait une sale aux vachers comme toi. L’autre jour, un Espagnol disait au Mulâtre de la boucherie que vous étiez pires que des Chichimèques, parce que vous étiez plus malins et plus menteurs.
 - Les Espagnols sont les plus grands menteurs de ce monde !
-	melchor_mid: Ils écrivent au Roi lui-même pour se plaindre de la misère dans laquelle ils vivent, alors qu’ils mangent de la viande fraîche tous les jours grâce au travail de gens comme toi et moi. Si on refusait tous de travailler pour moins de 80 piastres, je t’assure que les éleveurs seraient obligés d’accepter nos conditions.
+	melchor_mid: Si je te lisais les lettres qu’ils écrivent au Roi, c’est indécent, ils disent vivre dans la misère alors qu’ils se gavent de viande fraîche tous les jours grâce au travail de gens comme toi et moi. Si demain on refusait tous de travailler pour moins de 80 piastres, les éleveurs seraient forcés de nous les donner.
 	Diego de la Cruz te prend au mot. Le lendemain, tous les vachers de León jurent faire cause commune. C’est un petit monde \: en quelques semaines, le bruit s’est répandu et les éleveurs s'inquiètent. Mais ils cèdent \: les temps sont moroses, mais tu n’as jamais été si bien payé.
-- Il existe des bandits qui préfèrent la liberté sur cette terre plutôt que le salut de leur âme.
+- Que veux-tu, il y a des bandits qui préfèrent la liberté sur cette terre plutôt que le salut de leur âme.
 	Diego crache par terre et s’en va.
 	do GameOverlord.add_loyauty(1)
 	set {loyalty} += 1.0
 - Aide-moi à me lever, on va faire la peau à un Espagnol comme on abat un taureau.
-	Vous arrivez tant bien que mal à frapper aux portes de l’hôtel de ville, mais les Espagnols vous ont repéré. Un coup de feu part de quelques mètres derrière toi.
+	Vous divaguez dans les rues de León jusqu’à parvenir à la place principale. Vous arrivez tant bien que mal à frapper aux portes de l’hôtel de ville, mais la pique que tu tiens des deux mains a attiré l’attention. Un coup de feu éclate derrière toi.
 	do GameOverlord.game_over(2)
 	return
-Quelques semaines plus tard, Diego et toi formez une équipe avec un Espagnol désargenté et un Noir esclave. Vous devez ramener les bovins qu’un éleveur a vendu à un négociant de viande de San Felipe, l’un des endroits les plus dangereux du pays des Chichimèques, jusqu’à la vallée de San Juan où vous devrez payer un droit de passage, puis jusqu’à Mexico.
+Quelques semaines plus tard, Diego et toi formez une équipe avec un Espagnol désargenté et un Noir esclave. Vous devez ramener les bovins qu’un éleveur a promis à un négociant de viande de Mexico. Vous partez de San Felipe, l’un des endroits les plus dangereux du pays des Chichimèques.
 do GameOverlord.switch_to_level(3)

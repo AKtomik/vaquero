@@ -1,18 +1,18 @@
 do MusicPlayer.play_music_narration("interlude3")
-Aguascalientes, 1593. Tu as 58 ans. Une armistice a été conclue il y a trois ans avec les Chichimèques \: les nomades ont accepté de ne plus attaquer les colons à condition que ces derniers leur fournissent régulièrement du maïs, des habits et du bétail. Cela a permis aux Espagnols de s’installer dans des vallées où même toi tu n’osais pas pénétrer quelques années plus tôt...
+Aguascalientes, 1592. Tu as 57 ans. Un armistice vient d’être conclu avec les Chichimèques \: les nomades ont accepté de ne plus attaquer les colons contre un approvisionnement régulier de maïs, d’habits et de bétail. Cet accord a permis aux Espagnols de s’installer dans des vallées où tu ne te serais pas hasardé il y a quelques années...
 join melchor_mid center
-On t’a proposé d’amener des vaches de Guadiana jusqu’à la vallée de San Francisco. Ce voyage est long et périlleux, surtout à ton âge, mais si tu le réalises avec succès, tu as la promesse du capitaine Miguel Caldera que tu obtiendras des terres fertiles où tu pourras bâtir une maison pour y vivre avec ta famille. Tu parles de cette opportunité avec ta femme.
+On t’a proposé d’amener des vaches de Guadiana jusqu’à la vallée de San Francisco. Ce périple est long et périlleux, surtout à ton âge. Mais cela t’a été proposé par Miguel Caldera lui-même, un homme qui, comme toi, est né de l’union d’un Espagnol et d’une esclave, et dont la réputation comme capitaine de guerre est parvenu jusqu’aux oreilles du vice-roi, dont il a la faveur. Au bout du voyage, il t’a promis de te donner une maison avec des terres fertiles que tu pourras laisser à ta famille après ta mort. Tu parles de cette opportunité avec ta femme \:
 join leonor center
-leonor: Ça va faire dix ans que nous sommes mariés. Tu m’avais promis qu’on vivrait loin de la guerre. J’ai soigné tes blessures et j’ai élevé nos enfants seule pendant que tu chevauchais à travers le désert, sans savoir si tu reviendrais. Si tu n’arrêtes pas maintenant, tu laisseras une veuve et deux orphelins sans le sou.
-- Cette fois-ci, c’est la bonne, on ne travaillera plus jamais pour ces chiens d’Espagnols.
-	leonor: Entendu, je prendrai la route vers San Luis Potosí une fois que j’aurai vendu toutes nos affaires. Je compte sur ton compère Diego pour nous donner le vivre en t’attendant.
+leonor: Ça va faire dix ans que je t’ai épousé. Tu m’avais promis une vie loin de la guerre. J’ai élevé nos enfants seule pendant que tu chevauchais à travers le désert, sans savoir si tu reviendrais et quand tu revenais il fallait que je soigne tes blessures. Arrête maintenant si tu veux pas laisser une veuve et deux orphelins mourir de chagrin.
+- Mais cette fois-ci, c’est la bonne, on travaillera plus jamais pour ces chiens d’Espagnols.
+	leonor: Comme tu veux. On te rejoindra quand j’aurai vendu toutes nos affaires. Je demanderai à ton compère Diego de me montrer la route pour San Luis Potosí.
 - Fous-moi la paix et fais-moi à manger.
-	Ta femme a gardé le silence et elle est partie dans la cuisine. Tu l’entends réchauffer une soupe et quelques tortillas. Mais tu ne l’entends pas empoisonner ton dernier repas.
+	Ta femme garde le silence et part dans la cuisine. Tu l’entends réchauffer une soupe et quelques tortillas. Ce sera ton dernier repas.
 	do GameOverlord.game_over(3)
 	return
-- Tout changera à San Luis Potosí : la colline qui surplombe cette ville renferme plus d’argent que toutes les mines du Pérou réunies.
-	leonor: Quand je t’ai rencontré, tu te moquais de ton père qui croyait qu’il allait devenir le plus riche des hommes à Ixmiquilpan.
+- Tout va changer à San Luis Potosí : à une lieue de cette ville, il y a une colline qui renferme plus d’argent que toutes les mines du Pérou réunies.
+	leonor: Quand je t’ai rencontré, tu te moquais de ton père qui se voyait devenir le plus riche des hommes dans les mines d’Ixmiquilpan.
 	do GameOverlord.add_loyauty(1)
 	set {loyalty} += 1.0
-Quelques mois plus tard, tu es à une journée de parvenir à la vallée de San Francisco. La nuit est tombée, mais tu n’as plus à craindre les Chichimèques aux visages peints aux arcs bandés. Cependant, un faux mouvement pourrait disperser les troupeaux, au risque de défaire tous les efforts fournis au cours du périple.
+Cela fait deux mois que tu chevauches derrière ton troupeau. Dans quelques heures, tu parviendras dans la vallée de San Francisco. Mais le soleil disparaît derrière ton dos. Tu n’as plus à craindre les visages peints des Chichimèques. Ton inquiétude est ailleurs \: un faux mouvement pourrait épouvanter les vaches qui, perdues dans la nuit, disparaîtraient avec tes espoirs d’une vie meilleure.
 do GameOverlord.switch_to_level(4)
