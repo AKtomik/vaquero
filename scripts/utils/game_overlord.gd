@@ -69,8 +69,19 @@ func game_over(id: int) -> void:
 	await get_tree().change_scene_to_packed(game_over_scene)
 	match id:
 		0:
+			# intro before lvl 1
 			game_over_text = "Mort par la main de ton père."
+		1:
+			# interlude between lvl 1 and lvl 2 
+			game_over_text = "Mort tué par Juanico."
+		2:
+			# interlude between lvl 2 and lvl 3
+			game_over_text = "Mort par les balles d'un Espagnol."
+		3:
+			# interlude between lvl 3 and lvl 4
+			game_over_text = "Mort empoisonné par ta femme."
 		_:
+			# default
 			game_over_text = "C'est la fin pour toi."
 	
 # loyauty
