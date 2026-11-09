@@ -21,3 +21,5 @@ mono_crash.*.json
 
 .vscode
 build
+builds
+itch
